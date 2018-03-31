@@ -1,0 +1,27 @@
+import React, { Component } from 'react';
+
+class PageHeader extends Component {
+  render() {
+    let styles = {backgroundSize: 'cover'};
+    if (this.props.image) styles.backgroundImage = `url(${this.props.image})`;
+    return (
+      <div>
+        <div className="page-header bg-primary text-white" style={styles}>
+          <div className="container py-5">
+            <h1 className="display-5">{this.props.title}</h1>
+          </div>
+        </div>
+        <div hidden={!this.props.lead}>
+          <div className="container py-4">
+            <div className="col-md-7 px-0">
+              <p className="text-muted h5">{this.props.lead}</p>
+            </div>
+          </div>
+          <hr/>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default PageHeader;

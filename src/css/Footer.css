@@ -1,0 +1,29 @@
+footer.page-footer {
+  padding: 50px 0 30px 0;
+  border-top: 1px solid var(--color-shade-1);
+}
+footer.page-footer a {
+  color: var(--color-grey);
+}
+footer.page-footer .contact-info-group {
+  margin: 5px 0;
+}
+footer.page-footer .col-md-2 h4 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+footer.page-footer p.footnote {
+  margin: 15px 0; 
+}
+
+@media (max-width: 576px) {
+  footer.page-footer {
+    padding: 30px 0;
+  }
+  footer.page-footer .col-md-2 h4 {
+    margin-bottom: 5px;
+  }
+  footer.page-footer .col-md-2 {
+    margin: 15px 0;
+  }
+}

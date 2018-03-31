@@ -1,0 +1,12 @@
+.member.card .card-img-overlay {
+  background-color: rgba(0, 0, 0, .5);
+}
+.member.card .card-img,
+.member.card .card-img-top {
+  max-height: 160px;
+  object-fit: cover
+}
+.member.card .card-img-overlay .bottom-stuck {
+  position: absolute;
+  bottom: 15px;
+}

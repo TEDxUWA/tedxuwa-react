@@ -1,0 +1,74 @@
+.landing.page, .landing.page > .container {
+  position: relative;
+}
+.landing.opening {
+  height: calc(100vh - 135px);
+  min-height: 480px;
+  position: relative;
+  background-color: var(--color-shade-2);
+}
+.landing.page .bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 135px);
+  max-height: 600px;
+  min-height: 480px;
+  object-fit: cover;
+  object-position: center bottom;
+}
+.landing.page .hero-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.landing.page .hero-text {
+  font-size: 50px;
+  font-weight: bold;
+}
+.landing.page .hero-subtext {
+  color: #4A4A4A;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.landing.speaker {
+  background-color: var(--color-primary);
+  padding: 50px 0;
+  color: #fff;
+}
+.landing.speaker img {
+  float: right;
+  height: 160px;
+  object-fit: contain;
+}
+.landing.speaker h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.landing.speaker a[role="button"] {
+  margin-top: 15px;
+  font-weight: bold;
+}
+.landing.intro {
+  padding: 50px;
+}
+
+@media (max-width: 576px) {
+  .landing.page .bg-image {
+    object-position: -700px bottom;
+  }
+  .landing.speaker {
+    text-align: center;
+    padding: 50px 0;
+  }
+  .landing.speaker img {
+    float: none;
+    width: 100px;
+  }
+}
+@media (max-width: 500px) {
+  .landing.page .bg-image {
+    object-position: -800px bottom;
+  }
+}

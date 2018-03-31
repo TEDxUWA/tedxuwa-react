@@ -1,0 +1,24 @@
+:root {
+  --color-primary: #E62B1E;
+  --color-secondary: #000;
+  --color-grey: #4a4a4a;
+  --color-shade-1: #dddddd;
+  --color-shade-2: #f8f8f8;
+}
+
+@keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+body *:not(i) {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
+}
+.fl-right {
+  float: right;
+}
+.animation-fade {
+  animation: fade 0.15s ease-in-out;
+}

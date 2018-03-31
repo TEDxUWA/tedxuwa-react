@@ -1,0 +1,67 @@
+import React, { Component } from 'react';
+import landing_illustration from "../assets/landing_illustration.png";
+import {Link} from "react-router-dom";
+import speaker_icon from "../assets/speaker.png";
+import {SPEAKER_REGISTRATION_LINK} from "../services/Globals";
+import "../css/LandingPage.css";
+
+function Opening() {
+  return (
+    <div className="landing opening">
+      <img src={landing_illustration} alt="TEDxUWA" className="bg-image"/>
+      <div className="container">
+        <div className="hero-container">
+          <h1 className="hero-text">
+            <span className="text-primary">Ideas</span>
+            <br/>Worth Spreading
+          </h1>
+          <p className="hero-subtext">TEDxUWA: Life After Debt Workshop<br/> 8 Apr 2018</p>
+          <Link to="/events/life-after-debt"><button className="btn btn-primary text-uppercase">buy ticket</button></Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+function Speaker() {
+  return (
+    <div className="landing speaker">
+      <div className="container">
+        <div className="row">
+          <div className="col-xs-12 d-block d-sm-none mx-auto">
+            <img src={speaker_icon} alt="Want speak at an event?"/>
+          </div>
+          <div className="col-md-7">
+            <h2>Want to speak at an event?</h2>
+            <h4>Do you have an idea worth spreading? A tallent you want to share with the world? Applications for 2018 speakers are now open. Let us know what you would like to share, and we will find you an audience!</h4>
+            <a href={SPEAKER_REGISTRATION_LINK} rel="noreferrer noopener" target="_blank" role="button" className="btn btn-light">Learn more</a>
+          </div>
+          <div className="col-md-5 d-none d-sm-block">
+            <img src={speaker_icon} alt="Want speak at an event?"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+function Intro() {
+  return (
+    <div className="landing intro text-center container">
+      <h1 className="font-weight-bold mb-3">What is TEDxUWA</h1>
+      <p>In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. Our event is called TEDxUWA, where x = independently organized TED event. At our TEDxUWA event, TEDTalks video and live speakers will combine to spark deep discussion and connection in a small group. The TED Conference provides general guidance for the TEDx program, but individual TEDx events, including ours, are self-organized.</p>
+    </div>
+  );
+}
+
+class LandingPage extends Component {
+  render() {
+    return (
+      <div className="landing page">
+        <Opening />
+        <Speaker />
+        <Intro />
+      </div>
+    );
+  }
+}
+
+export default LandingPage;
