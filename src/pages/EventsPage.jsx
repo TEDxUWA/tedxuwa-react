@@ -90,7 +90,7 @@ class EventDetail extends Component {
               <p>{event.date}</p>
               <p>{event.location}</p>
               <div class="mt-3">
-                <iframe className='w-100' src="https://maps.google.com/maps?q=octagon theatre&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <iframe className='w-100' src={`https://maps.google.com/maps?q=${event.location}&t=&z=13&ie=UTF8&iwloc=&output=embed`} frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
               </div>
               <button className="btn btn-success mt-3">Purchase tickets</button>
             </div>
