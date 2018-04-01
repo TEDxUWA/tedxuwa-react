@@ -17,6 +17,8 @@ class Navbar extends Component {
   }
   toggleNav = () => this.setState({showNav: !this.state.showNav});
   render() {
+    const currentPath = this.props.location.pathname;
+    console.log(currentPath);
     return (
       <div>
         <nav className="navbar fixed-top text-uppercase px-0 py-2">
@@ -29,7 +31,9 @@ class Navbar extends Component {
             <div className="nav-group col-sm-6 col-md-7 d-none d-md-block p-0">
               <ul className="list-inline navbar-links">
                 {this.state.links.map(link => (
-                  <li className="nav-item list-inline-item" key={link.to}><Link to={link.to}>{link.text}</Link></li>
+                  <li className={`nav-item list-inline-item ${currentPath.includes(link.to) ? 'active' : ''}`} key={link.to}>
+                    <Link to={link.to}>{link.text}</Link>
+                  </li>
                 ))}
               </ul>
             </div>
@@ -43,7 +47,7 @@ class Navbar extends Component {
           <div className="xs-nav w-100 mt-2 border-top bg-white animation-fade border" hidden={!this.state.showNav}>
             <ul className="nav-flex-column">
               {this.state.links.map(link => (
-                <li className="nav-item" key={link.to} onClick={this.toggleNav}>
+                <li className={`nav-item ${currentPath.includes(link.to) ? 'active' : ''}`}key={link.to} onClick={this.toggleNav}>
                   <Link to={link.to} className="nav-link text-dark font-weight-bold">{link.text}</Link>
                 </li>
               ))}

@@ -17,6 +17,12 @@
 .navbar .navbar-links a {
   color: var(--color-grey);
 }
+.navbar .navbar-links a:hover {
+  text-decoration: none;
+}
+.navbar .navbar-links .nav-item:hover {
+  box-shadow: 0 2px 0 var(--color-grey)
+}
 .logo {
   object-fit: contain;
   max-width: 190px;

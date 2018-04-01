@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 
 class PageHeader extends Component {
   render() {
@@ -8,7 +9,12 @@ class PageHeader extends Component {
       <div>
         <div className="page-header bg-primary text-white" style={styles}>
           <div className="container py-5">
-            <h1 className="display-5">{this.props.title}</h1>
+            <h1 className="display-5">
+            {this.props.root
+            ? <Link to={this.props.root} className='link-unset'>{this.props.title}</Link>
+            : this.props.title
+            }
+            </h1>
           </div>
         </div>
         <div hidden={!this.props.lead}>
