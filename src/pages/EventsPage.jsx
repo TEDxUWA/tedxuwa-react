@@ -80,7 +80,7 @@ class EventDetail extends Component {
     return (
       <div className="container py-4">
         <div className="row">
-          <div className="col-md-7">
+          <div className="col-md-7 mb-4">
             <h3 className="font-weight-bold">{event.title}</h3>
             <p className="lead text-muted">{event.description}</p>
             <img src={event.image} alt={event.title} className='img-fluid mt-3'/>
@@ -90,7 +90,7 @@ class EventDetail extends Component {
               <p>{event.date}</p>
               <p>{event.location}</p>
               <div class="mt-3">
-                <iframe className='w-100' src={`https://maps.google.com/maps?q=${event.location}&t=&z=13&ie=UTF8&iwloc=&output=embed`} frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <iframe title='event-location-map-embed' className='w-100' src={`https://maps.google.com/maps?q=${event.location}&t=&z=17&ie=UTF8&iwloc=&output=embed`} frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
               </div>
               <button className="btn btn-success mt-3">Purchase tickets</button>
             </div>
