@@ -7,9 +7,9 @@ class PageHeader extends Component {
     if (this.props.image) styles.backgroundImage = `url(${this.props.image})`;
     return (
       <div>
-        <div className="page-header bg-primary text-white" style={styles}>
+        <div className="page-header bg-primary text-white py-5" style={styles}>
           <div className="container py-5">
-            <h1 className="display-5">
+            <h1 className="display-5 font-weight-bold">
             {this.props.root
             ? <Link to={this.props.root} className='link-unset'>{this.props.title}</Link>
             : this.props.title

@@ -21,15 +21,17 @@ class MemberCard extends Component {
             <div className="bottom-stuck">
               <h4 className="card-title mb-0 font-weight-bold">{member.name}</h4>
               <p className="card-text">{member.position}</p>
-              <div className="links-group" hidden={!member.links}>
-                <ul className="list-unstyled list-inline">
-                  {member.links.map(link => (
-                    <li className="list-inline-item" key={link.url}>
-                      <a href={link.url} className={`${!match ? 'text-white' : 'text-dark'}`}><i className={link.icon}/></a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {member.links ?
+                <div className="links-group">
+                  <ul className="list-unstyled list-inline">
+                    {member.links.map(link => (
+                      <li className="list-inline-item" key={link.url}>
+                        <a href={link.url} target='_blank' rel='noopener noreferrer' className={`${!match ? 'text-white' : 'text-dark'}`}><i className={link.icon}/></a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              : null}
             </div>
           </div>
         </div>

@@ -51,7 +51,7 @@
   font-weight: bold;
 }
 .landing.intro {
-  padding: 50px;
+  padding: 50px 15px;
 }
 
 @media (max-width: 576px) {

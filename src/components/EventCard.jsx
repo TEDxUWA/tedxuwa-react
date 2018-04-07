@@ -5,7 +5,7 @@ import slugify from "slugify";
 const EventCard = ({data}) => {
   return (
     <Link to={`/events/${slugify(data.title, {lower: true})}`} className='link-unset'>
-      <div className="event card rounded-0">
+      <div className="event card rounded-0 card-hover">
         <img src={data.image} alt={data.title} className="card-img-top img-fluid rounded-0" style={{maxHeight: '200px'}}/>
         <div className="card-img-overlay" style={{maxHeight: '200px'}}>
           <span className="badge badge-dark text-uppercase">{data.type}</span>

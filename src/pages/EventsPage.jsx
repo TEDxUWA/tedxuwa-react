@@ -5,29 +5,29 @@ import slugify from "slugify";
 import Media from "react-media";
 import {Switch, Route} from 'react-router'
 
-const dummy = [
+const upcomingEvents = [
   {
     type: 'conference',
-    date: 'Wednesday, 15th Oct 2018',
+    date: 'TBA',
     location: 'Octagon Theatre',
-    title: 'Foo dummy bar conference',
-    description: 'a fun dolor sorem ipsum aljd kjsioj sdalw.',
+    title: 'TEDxUWA 2018: Turning Points',
+    description: `TEDxUWA 2018 at the Octagon Theatre. The theme of this year is 'Turning Points'`,
     image: 'https://source.unsplash.com/featured/?abstract'
   },
   {
     type: 'workshop',
-    date: 'Monday, 12th August 2018',
-    location: 'FLUX',
-    title: 'Foo dummy bar workshop',
-    description: 'a fun d sdjfhk as jalkjis kaslolor sorem ipsum aljd kjsioj sdalw.',
+    date: 'Tuesday, 8th May 2018',
+    location: 'TBA',
+    title: 'Life After Debt Workshop',
+    description: 'TEDxUWA & UWA Business School presents the Life After Debt Workshop',
     image: 'https://source.unsplash.com/featured/?workshop'
   }
 ];
 
 class EventList extends Component {
   state = {
-    upcoming: Array(4).fill(null).map(() => dummy[Math.round(Math.random())]),
-    past: Array(5).fill(null).map(() => dummy[Math.round(Math.random())]),
+    upcoming: upcomingEvents,
+    past: [],
     pastLimit: 3,
   };
   showAllPast = () => this.setState({pastLimit: this.state.past.length});
@@ -72,7 +72,7 @@ class EventDetail extends Component {
     event: {},
   }
   componentDidMount = () => {
-    const event = dummy.find(e => slugify(e.title, {lower: true}) === this.props.match.params.eventSlug);
+    const event = upcomingEvents.find(e => slugify(e.title, {lower: true}) === this.props.match.params.eventSlug);
     this.setState({event});
   }
   render() {
@@ -89,8 +89,8 @@ class EventDetail extends Component {
             <div className="card p-3">
               <p>{event.date}</p>
               <p>{event.location}</p>
-              <div class="mt-3">
-                <iframe title='event-location-map-embed' className='w-100' src={`https://maps.google.com/maps?q=${event.location}&t=&z=17&ie=UTF8&iwloc=&output=embed`} frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+              <div className="mt-3">
+                <iframe title='event-location-map-embed' className='w-100' src={`https://maps.google.com/maps?q=${event.location}&t=&z=17&ie=UTF8&iwloc=&output=embed`} frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe>
               </div>
               <button className="btn btn-success mt-3">Purchase tickets</button>
             </div>

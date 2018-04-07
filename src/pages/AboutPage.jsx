@@ -2,21 +2,14 @@ import React, {Component} from "react";
 import PageHeader from "../components/PageHeader";
 import SpeakerRegistrationSection from "../components/SpeakerRegistrationSection";
 import MemberCard from "../components/MemberCard";
-const foo = {
-  image: 'https://source.unsplash.com/featured/?portrait',
-  name: 'Jane Doe',
-  position: 'Vice President',
-  links: [
-    {icon: 'fab fa-linkedin', url: 'https://linkedin.com'},
-    {icon: 'fab fa-facebook', url: 'https://facebook.com'}
-  ]
-};
+import banner from '../assets/about_us_banner.jpg';
+import TEAM from '../teamMembers.json';
 
 class AboutPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      team: Array(20).fill(foo),
+      team: TEAM,
       max: 4
     };
   }
@@ -24,7 +17,7 @@ class AboutPage extends Component {
   render() {
     return (
       <div className="about page">
-        <PageHeader title="About Us" lead="We seek to find and share ideas from arround the world and closer to home with the UWA community. We are students from the University of Western Australia , we are TEDxUWA." root='/about'/>
+        <PageHeader title="About Us" lead="We seek to find and share ideas from arround the world and closer to home with the UWA community. We are students from the University of Western Australia , we are TEDxUWA." root='/about' image={banner}/>
         <div className="container py-4 px-0">
             <div className="tedx-group col-md-7">
               <h3 className="font-weight-bold mb-2">What is TEDx</h3>

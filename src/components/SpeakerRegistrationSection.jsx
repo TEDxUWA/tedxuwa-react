@@ -8,7 +8,7 @@ class SpeakerRegistrationSection extends Component {
         <div className="container">
           <h4 className="font-weight-bold mb-2">Got an idea worth spreading?</h4>
           <p>
-            Apply to speak at our events&nbsp;&nbsp;
+            Apply to speak at our events.&nbsp;&nbsp;
             <a href={SPEAKER_REGISTRATION_LINK} rel="noreferrer noopener" target="_blank" className="text-primary">
               Learn more&nbsp;&nbsp;<i className="fas fa-external-link-alt"/>
             </a>

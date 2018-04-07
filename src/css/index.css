@@ -22,6 +22,14 @@ body *:not(i) {
 .animation-fade {
   animation: fade 0.15s ease-in-out;
 }
+.card-hover {
+  box-shadow: 0;
+  transition: all 0.15s ease-out;
+}
+.card-hover:hover {
+  border-bottom-width: 0;
+  box-shadow: 0 2px 0 var(--color-primary);
+}
 a.link-unset {
   color: inherit;
 }

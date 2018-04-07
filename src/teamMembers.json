@@ -1,0 +1,167 @@
+[
+  {
+    "image": "https://source.unsplash.com/featured?people",
+    "name": "Leanne Jiang",
+    "position": "President",
+    "links": [
+      {"icon": "fab fa-linkedin", "url": "https://linkedin.com/in/leanne-jiang"}
+    ]
+  },
+  {
+    "image": "https://source.unsplash.com/featured?people",
+    "name": "Danielle Shim",
+    "position": "Vice President",
+    "links": [
+      {"icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/danielle-shim-5680a2153/"}
+    ]
+  },
+  {
+    "image": "https://source.unsplash.com/featured?people",
+    "name": "Danielle Le Blanc",
+    "position": "Secretary",
+    "links": [
+      {"icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/danielle-leblanc-41a5b8148/"}
+    ]
+  },
+  {
+    "image": "https://source.unsplash.com/featured?people",
+    "name": "Alex Grant",
+    "position": "Treasurer"
+  },
+  {
+    "image": "https://source.unsplash.com/featured?people",
+    "name": "Ian Brady",
+    "position": "Head of Marketing & Branding"
+  },
+  {
+    "image": "https://source.unsplash.com/featured?people",
+    "name": "Florence Ly",
+    "position": "Head of Communications & Sponsorship",
+    "links": [
+      {"icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/florencely71218/"}
+    ]
+  },
+  {
+    "image": "https://source.unsplash.com/featured?people",
+    "name": "Shriram Srinivasan",
+    "position": "Head of Events"
+  },
+  {
+    "image": "https://source.unsplash.com/featured?people",
+    "name": "Talia Strutt",
+    "position": "Co-head of Speaker Resources",
+    "links": [
+      {"icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/ACoAACC5AJIBfe5zG4icKrtb_LN6RjNILiqyEf8/"}
+    ]
+  },
+  {
+    "image": "https://source.unsplash.com/featured?people",
+    "name": "Justin Leong",
+    "position": "Co-head of Speaker Resources"
+  },
+  {
+    "image": "https://source.unsplash.com/featured?people",
+    "name": "Marcus Leong",
+    "position": "Internal Relations Officer",
+    "links": [
+      {"icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/marcusleong95/"}
+    ]
+  },
+  {
+    "image": "https://source.unsplash.com/featured?people",
+    "name": "Dareen El-Lagta",
+    "position": "Graphic Designer",
+    "links": [
+      {"icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/dareen-ellagta/"}
+    ]
+  },
+  {
+    "image": "https://source.unsplash.com/featured?people",
+    "name": "Minh Le",
+    "position": "Branding Officer",
+    "links": [
+      {"icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/vietminhle/"}
+    ]
+  },
+  {
+    "image": "https://source.unsplash.com/featured?people",
+    "name": "Sanjeev Poudel",
+    "position": "Branding Officer",
+    "links": [
+      {"icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/sanjeevdevs/"}
+    ]
+  },
+  {
+    "image": "https://source.unsplash.com/featured?people",
+    "name": "Jade Wu",
+    "position": "Sponsorships"
+  },
+  {
+    "image": "https://source.unsplash.com/featured?people",
+    "name": "James Maddeford",
+    "position": "Sponsorships",
+    "links": [
+      {"icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/jamesmaddeford/"}
+    ]
+  },
+  {
+    "image": "https://source.unsplash.com/featured?people",
+    "name": "James Dingley",
+    "position": "IT Officer",
+    "links": [
+      {"icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/jamesdingley/"}
+    ]
+  },
+  {
+    "image": "https://source.unsplash.com/featured?people",
+    "name": "Isha Singh",
+    "position": "Communications Officer",
+    "links": [
+      {"icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/ishasingh2/"}
+    ]
+  },
+  {
+    "image": "https://source.unsplash.com/featured?people",
+    "name": "Lucy Anderson",
+    "position": "Catering & Venue"
+  },
+  {
+    "image": "https://source.unsplash.com/featured?people",
+    "name": "Pascale LeBlanc",
+    "position": "Media Coordinator"
+  },
+  {
+    "image": "https://source.unsplash.com/featured?people",
+    "name": "Jaskirat Singh",
+    "position": "Media Coordinator",
+    "links": [
+      {"icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/jaskirat-singh-49813312a/"}
+    ]
+  },
+  {
+    "image": "https://source.unsplash.com/featured?people",
+    "name": "Daniel Chen",
+    "position": "Speaker Resources Officer"
+  },
+  {
+    "image": "https://source.unsplash.com/featured?people",
+    "name": "Divya Bappoo",
+    "position": "Speaker Resources Officer",
+    "links": [
+      {"icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/divya-bappoo-75aa9915b/"}
+    ]
+  },
+  {
+    "image": "https://source.unsplash.com/featured?people",
+    "name": "Mytreye Manikyam",
+    "position": "Speaker Resources Officer",
+    "links": [
+      {"icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/mytreye-manikyam-584319a1/"}
+    ]
+  },
+  {
+    "image": "https://source.unsplash.com/featured?people",
+    "name": "Samha Khan",
+    "position": "Speaker Resources Officer"
+  }
+]
