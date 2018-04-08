@@ -33,8 +33,8 @@ class Footer extends Component {
             <div className="col-md-2 collaborate-group">
               <h4>Get Involved</h4>
               <ul className="list-unstyled">
-                <li><Link to="/volunteer">Volunteer</Link></li>
-                <li><Link to="/partnership">Work with us</Link></li>
+                <li><Link to="/sponsors">Volunteer</Link></li>
+                <li><Link to="/sponsors">Work with us</Link></li>
               </ul>
             </div>
             <div className="col-md-2 about-group">

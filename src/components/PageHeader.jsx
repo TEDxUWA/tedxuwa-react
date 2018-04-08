@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 class PageHeader extends Component {
   render() {
-    let styles = {backgroundSize: 'cover'};
+    let styles = {backgroundSize: 'cover', backgroundPosition: 'center'};
     if (this.props.image) styles.backgroundImage = `url(${this.props.image})`;
     return (
       <div>

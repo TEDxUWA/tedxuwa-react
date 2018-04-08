@@ -3,7 +3,8 @@ import PageHeader from "../components/PageHeader";
 import EventCard from "../components/EventCard";
 import slugify from "slugify";
 import Media from "react-media";
-import {Switch, Route} from 'react-router'
+import {Switch, Route} from 'react-router';
+import banner from '../assets/stage.jpg';
 
 const upcomingEvents = [
   {
@@ -58,7 +59,7 @@ class EventList extends Component {
                 </div>
               ))}
             </div>
-            <button className="btn btn-light mx-auto mt-3" onClick={this.showAllPast} hidden={this.state.pastLimit === this.state.past.length}>Show all</button>
+            <button className="btn btn-light mx-auto mt-3 w-100" onClick={this.showAllPast} hidden={this.state.pastLimit === this.state.past.length}>Show all</button>
           </div>
         </div>
       </div>}
@@ -107,7 +108,7 @@ class EventsPage extends Component {
     const lead = "The TEDxUWA movement aims to be actively involved within the campus culture of the UWA community and help foster ideas throughout the year. Check out this year's events below, or view highlights from previous years.";
     return (
       <div className="events page">
-        <PageHeader title="Events" lead={root === this.props.location.pathname ? lead : null} root={root}/>
+        <PageHeader title="Events" image={banner} lead={root === this.props.location.pathname ? lead : null} root={root}/>
         <Switch>
           <Route path={`${root}/:eventSlug`} component={EventDetail}/>
           <Route path={`${root}`} component={EventList}/>

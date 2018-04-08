@@ -12,6 +12,7 @@ class Navbar extends Component {
         {to: '/events', text: 'events'},
         {to: '/about', text: 'about'},
         {to: '/contact', text: 'contact'},
+        {to: '/sponsors', text: 'get involved'}
       ]
     };
   }

@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import AboutPage from "./pages/AboutPage";
 import EventsPage from "./pages/EventsPage";
 import ContactPage from './pages/ContactPage';
+import SponsorsPage from './pages/SponsorsPage';
 import './css/App.css';
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
           <Route component={ScrollToTop}/>
             <Route path="/" component={Navbar}/>
             <Switch>
+              <Route exact path="/sponsors" component={SponsorsPage}/>
               <Route exact path="/contact" component={ContactPage}/>
               <Route exact path="/events" component={EventsPage}/>
               <Route exact path="/about" component={AboutPage}/>

@@ -1,0 +1,47 @@
+.sponsors.page .card .card-img-top {
+  object-fit: contain;
+  object-position: center;
+}
+.sponsors.page .gold-group .card .card-img-top {
+  object-fit: contain;
+  height: 120px;
+  object-position: center;
+}
+.sponsors.page .silver-group .card .card-img-top {
+  object-fit: contain;
+  height: 100px;
+  object-position: center;
+}
+.sponsors.page .bronze-group .card .card-img-top {
+  object-fit: contain;
+  height: 80px;
+  object-position: center;
+}
+.sponsors.page .card .card-title {
+  height: 3.5rem;
+  overflow: hidden;
+}
+.sponsors.page .card .card-text {
+  overflow: hidden;
+  position: relative; 
+  line-height: 1.2em;
+  max-height: 3.6em; 
+  text-align: justify;  
+  margin-right: -1em;
+  padding-right: 1em;
+}
+.sponsors.page .card .card-text:before {
+  content: '...';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.sponsors.page .card .card-text:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+  background: white;
+}

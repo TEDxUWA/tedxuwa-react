@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import PageHeader from "../components/PageHeader";
 import SpeakerRegistrationSection from "../components/SpeakerRegistrationSection";
 import MemberCard from "../components/MemberCard";
-import banner from '../assets/about_us_banner.jpg';
+import banner from '../assets/team.jpg';
 import TEAM from '../teamMembers.json';
 
 class AboutPage extends Component {
@@ -21,7 +21,7 @@ class AboutPage extends Component {
         <div className="container py-4 px-0">
             <div className="tedx-group col-md-7">
               <h3 className="font-weight-bold mb-2">What is TEDx</h3>
-              <p>In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. Our event is called TEDxUWA, where x = independently organized TED event. At our TEDxUWA event, TEDTalks video and live speakers will combine to spark deep discussion and connection in a small group. The TED Conference provides general guidance for the TEDx program, but individual TEDx events, including ours, are self-organized.</p>
+              <p className='text-justify'>In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. Our event is called TEDxUWA, where x = independently organized TED event. At our TEDxUWA event, TEDTalks video and live speakers will combine to spark deep discussion and connection in a small group. The TED Conference provides general guidance for the TEDx program, but individual TEDx events, including ours, are self-organized.</p>
             </div>
         </div>
         <hr/>
@@ -36,7 +36,7 @@ class AboutPage extends Component {
                   </div>
                 ))}
               </div>
-              <button className="btn btn-light text-dark mt-3" onClick={this.showAll} hidden={this.state.max === this.state.team.length}>Show all</button>
+              <button className="btn btn-light text-dark mt-3 w-100" onClick={this.showAll} hidden={this.state.max === this.state.team.length}>Show all</button>
             </div>
           </div>
         </div>
