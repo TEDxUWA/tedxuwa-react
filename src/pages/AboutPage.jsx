@@ -10,7 +10,7 @@ class AboutPage extends Component {
     super(props);
     this.state = {
       team: TEAM,
-      max: 4
+      max: 50
     };
   }
   showAll = () => this.setState({max: this.state.team.length});
@@ -28,16 +28,14 @@ class AboutPage extends Component {
         <div className="container py-4 px-0">
           <div className="team-group col-sm-12">
             <h3 className="font-weight-bold mb-4">Meet the team</h3>
-            <div className="d-flex flex-wrap">
-              <div className="row">
-                {this.state.team.slice(0, this.state.max).map((member, index) => (
-                  <div className="d-inline-block px-0 px-sm-2 col-6 col-md-4 col-lg-3 mb-0 mb-sm-3" key={index}>
-                    <MemberCard data={member}/>
-                  </div>
-                ))}
-              </div>
-              <button className="btn btn-light text-dark mt-3 w-100" onClick={this.showAll} hidden={this.state.max === this.state.team.length}>Show all</button>
+            <div className="row">
+              {this.state.team.slice(0, this.state.max).map((member, index) => (
+                <div className="d-inline-block px-0 px-sm-2 col-6 col-md-4 col-lg-3 col-xl-3 mb-0 mb-sm-3" key={index}>
+                  <MemberCard data={member}/>
+                </div>
+              ))}
             </div>
+            <button className="btn btn-light text-dark mt-3 w-100" onClick={this.showAll} hidden={this.state.max === this.state.team.length}>Show all</button>
           </div>
         </div>
         <hr/>

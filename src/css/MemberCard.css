@@ -3,10 +3,32 @@
 }
 .member.card .card-img,
 .member.card .card-img-top {
-  max-height: 160px;
-  object-fit: cover
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
+.member.card .member-photo {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  background-size: cover;
+  margin-top: 0.10rem;
+}
+.member.card .photo-placeholder {
+  height: 250px;
+  text-align: center;
+  background-color: var(--color-shade-2);
+  color: var(--color-shade-1);
 }
 .member.card .card-img-overlay .bottom-stuck {
   position: absolute;
-  bottom: 15px;
+  bottom: 0;
+  width: calc(100% - 2rem);
+}
+@media screen and (max-width: 768px) {
+  .member.card .card-img,
+  .member.card .card-img-top,
+  .member.card .photo-placeholder {
+    height: 200px;
+  }
 }

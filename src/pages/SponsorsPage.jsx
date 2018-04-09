@@ -41,7 +41,7 @@ export default class SponsorsPage extends Component {
               </div>
               <div className="col-md-6">
                 <p className="lead mb-3">
-                  We seek to find and share ideas from arround the world and closer to home with the UWA community. We seek to inspire active participation in important discussions.
+                  TEDxUWA find and share ideas from arround the world and closer to home with the UWA community. We seek to inspire active participation in important discussions.
                 </p>
               </div>
             </div>

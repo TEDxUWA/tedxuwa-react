@@ -19,7 +19,6 @@ class Navbar extends Component {
   toggleNav = () => this.setState({showNav: !this.state.showNav});
   render() {
     const currentPath = this.props.location.pathname;
-    console.log(currentPath);
     return (
       <div>
         <nav className="navbar fixed-top text-uppercase px-0 py-2">

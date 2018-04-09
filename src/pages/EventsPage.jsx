@@ -13,7 +13,7 @@ const upcomingEvents = [
     location: 'Octagon Theatre',
     title: 'TEDxUWA 2018: Turning Points',
     description: `TEDxUWA 2018 at the Octagon Theatre. The theme of this year is 'Turning Points'`,
-    image: 'https://source.unsplash.com/featured/?abstract'
+    image: 'https://source.unsplash.com/500x200/?abstract'
   },
   {
     type: 'workshop',
@@ -21,7 +21,7 @@ const upcomingEvents = [
     location: 'TBA',
     title: 'Life After Debt Workshop',
     description: 'TEDxUWA & UWA Business School presents the Life After Debt Workshop',
-    image: 'https://source.unsplash.com/featured/?workshop'
+    image: 'https://source.unsplash.com/500x200/?workshop'
   }
 ];
 
