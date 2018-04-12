@@ -40,3 +40,21 @@ a.link-unset:hover {
   color: inherit;
   outline: inherit;
 }
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  margin-bottom: 1rem;
+}
+.markdown p {
+  margin: 0.25rem 0;
+}
+.markdown hr {
+  margin: 1.25rem 0;
+}
+.markdown img {
+  margin: 1.25rem 0;
+}

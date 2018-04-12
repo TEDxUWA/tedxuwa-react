@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ScrollToTop from "./components/ScrollToTop";
-import LandingPage from "./pages/LandingPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import AboutPage from "./pages/AboutPage";
-import EventsPage from "./pages/EventsPage";
-import ContactPage from './pages/ContactPage';
-import SponsorsPage from './pages/SponsorsPage';
+import ASYNC from './services/AsyncComponents';
 import './css/App.css';
 
 class App extends Component {
@@ -21,11 +17,11 @@ class App extends Component {
           <Route component={ScrollToTop}/>
             <Route path="/" component={Navbar}/>
             <Switch>
-              <Route exact path="/sponsors" component={SponsorsPage}/>
-              <Route exact path="/contact" component={ContactPage}/>
-              <Route path="/events" component={EventsPage}/>
-              <Route exact path="/about" component={AboutPage}/>
-              <Route exact path="/" component={LandingPage}/>
+              <Route exact path="/sponsors" component={ASYNC.SponsorsPage}/>
+              <Route exact path="/contact" component={ASYNC.ContactPage}/>
+              <Route path="/events" component={ASYNC.EventsPage}/>
+              <Route exact path="/about" component={ASYNC.AboutPage}/>
+              <Route exact path="/" component={ASYNC.LandingPage}/>
             </Switch>
             <Route path="/" component={Footer}/>
         </div>
