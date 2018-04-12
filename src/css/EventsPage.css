@@ -7,6 +7,7 @@
   margin-bottom: 0;
 }
 .events.page .jumbotron .bottom-stuck {
+  background-color: rgba(0, 0, 0, .3);
   position: absolute;
   bottom: 0;
   left: 0;

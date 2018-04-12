@@ -6,35 +6,14 @@ import Media from "react-media";
 import { Switch, Route } from 'react-router';
 import banner from '../assets/stage.jpg';
 import ReactMarkdown from 'react-markdown';
+import upcomingEvents from '../events/upcoming.json';
+import pastEvents from '../events/past.json';
 import '../css/EventsPage.css';
-
-const upcomingEvents = [
-  {
-    type: 'conference',
-    date: 'TBA',
-    location: 'Octagon Theatre',
-    title: 'TEDxUWA 2018',
-    blurb: `TEDxUWA 2018 at the Octagon Theatre`,
-    description: require('../events/TurningPoint.md'),
-    image: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0956178e44084db0e4a725c8b1e370e9&auto=format&fit=crop&w=1050&q=80',
-    link: 'https://www.trybooking.com/VDMJ'
-  },
-  {
-    type: 'workshop',
-    date: 'Tuesday, 8th May 2018',
-    location: 'EY Lecture Theatre',
-    title: 'Life After Debt Workshop',
-    blurb: 'TEDxUWA & UWA Business School presents the Life After Debt Workshop',
-    description: require('../events/LifeAfterDebt.md'),
-    image: 'https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7627d227061b49e48737d835fda210a7&auto=format&fit=crop&w=1030&q=80',
-    link: '#'
-  }
-];
 
 class EventList extends Component {
   state = {
     upcoming: upcomingEvents,
-    past: [],
+    past: pastEvents,
     pastLimit: 3,
   };
   showAllPast = () => this.setState({ pastLimit: this.state.past.length });
@@ -83,15 +62,12 @@ class EventDetail extends Component {
     description: ''
   }
   componentDidMount = () => {
-    const event = upcomingEvents.find(e => slugify(e.title, { lower: true }) === this.props.match.params.eventSlug);
+    const event = upcomingEvents.find(e => slugify(e.title, { lower: true }) === this.props.match.params.eventSlug) ||
+                  pastEvents.find(e => slugify(e.title, {lower: true}) === this.props.match.params.eventSlug);
     this.setState({ event });
-    if (event) this.fetchDescription(event.description);
-  }
-  fetchDescription = (path) => {
-    fetch(path).then(data => data.text()).then(desc => this.setState({ description: desc }));
   }
   render() {
-    const { event } = this.state;
+    const { event={} } = this.state;
     return (
       <div>
         <div className="jumbotron text-white rounded-0" style={{
@@ -112,20 +88,22 @@ class EventDetail extends Component {
         <div className="container py-4">
           <div className="row">
             <div className="col-md-7 mb-4">
-              <ReactMarkdown source={this.state.description} className='markdown' />
+              <ReactMarkdown source={event.description} className='markdown' />
             </div>
-            <div className="col-md-5">
-              <div className="card p-3">
-                <p>{event.date}</p>
-                <p>{event.location}</p>
-                <div className="mt-3">
-                  <iframe title='event-location-map-embed' className='w-100' src={`https://maps.google.com/maps?q=${event.location}&t=&z=17&ie=UTF8&iwloc=&output=embed`} frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe>
+            {!event.past ?
+              <div className="col-md-5">
+                <div className="card p-3">
+                  <p>{event.date}</p>
+                  <p>{event.location}</p>
+                  <div className="mt-3">
+                    <iframe title='event-location-map-embed' className='w-100' src={`https://maps.google.com/maps?q=${event.location}&t=&z=17&ie=UTF8&iwloc=&output=embed`} frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe>
+                  </div>
+                  <a href={event.link} className='link-unset' rel='noopener noreferrer'>
+                    <button className="btn btn-success mt-3">Purchase tickets</button>
+                  </a>
                 </div>
-                <a href={event.link} className='link-unset' rel='noopener noreferrer'>
-                  <button className="btn btn-success mt-3">Purchase tickets</button>
-                </a>
               </div>
-            </div>
+            :null}
           </div>
         </div>
       </div>

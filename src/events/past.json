@@ -1,0 +1,62 @@
+[
+  {
+    "type": "salon",
+    "date": "2017",
+    "location": "",
+    "title": "ART//ACT",
+    "blurb": "In this two-part series we explored the idea of \"artistic activism\". Over the course of these events we discovered how local change-makers are taking a stance on global issues through artistic platforms.",
+    "description": "In this two-part series we explored the idea of \"artistic activism\". Over the course of these events we discovered how local change-makers are taking a stance on global issues through artistic platforms.",
+    "image": "https://i.imgur.com/hNkjvP5.jpg",
+    "past": true
+  },
+  {
+    "type": "salon",
+    "date": "2017",
+    "location": "",
+    "title": "Biomedical Engineering Salon",
+    "blurb": "Held at Harry Perkins Institute of Medical Research, we had a splendid night of talks centred around the importance of mental health.",
+    "description": "Held at Harry Perkins Institute of Medical Research, we had a splendid night of talks centred around the importance of mental health.",
+    "image": "https://i.imgur.com/cGmdB5G.jpg",
+    "past": true
+  },
+  {
+    "type": "conference",
+    "date": "2017",
+    "location": "",
+    "title": "TEDxUWA 2017: The Future Blueprint",
+    "blurb": "The 2nd TEDxUWA Conference brought together a pionering squad of changemakers for a day full of ideas worth spreading. From talks to poetry, workshops to drone races, it was a day to remember.",
+    "description": "The 2nd TEDxUWA Conference brought together a pionering squad of changemakers for a day full of ideas worth spreading. From talks to poetry, workshops to drone races, it was a day to remember.",
+    "image": "https://i.imgur.com/auHZbX2.jpg",
+    "past": true
+  },
+  {
+    "type": "conference",
+    "date": "2016",
+    "location": "",
+    "title": "TEDxUWA 2016: Changing Perceptions",
+    "blurb": "The TEDxUWA Conference is the most highly anticipated event in the TEDxUWA calendar. It gave a platform to explore ideas of social justice, economic transformation.",
+    "description": "The TEDxUWA Conference is the most highly anticipated event in the TEDxUWA calendar. It gave a platform to explore ideas of social justice, economic transformation.",
+    "image": "https://i.imgur.com/VmOJv7D.jpg",
+    "past": true
+  },
+  {
+    "type": "workshop",
+    "date": "2016",
+    "location": "",
+    "title": "VGen & TEDxUWA Ideas Night",
+    "blurb": "Presented by TEDxUWA and World Vision's VGen; a night of sharing ideas from arround Western Australia and across the globe including issues including inequality and homelessness.",
+    "description": "Presented by TEDxUWA and World Vision's VGen; a night of sharing ideas from arround Western Australia and across the globe including issues including inequality and homelessness.",
+    "image": "https://i.imgur.com/WXQDdIZ.jpg",
+    "past": true
+  },
+  {
+    "type": "salon",
+    "date": "2016",
+    "location": "",
+    "title": "Masterpiece Micro Conference Salon",
+    "blurb": "Held in the Lawrence Wilson Art Gallery, the theme was Arts and Culture. It's big, it's broad and had the audience all \"oooohs\" and \"ahhhhs\"",
+    "description": "Held in the Lawrence Wilson Art Gallery, the theme was Arts and Culture. It's big, it's broad and had the audience all \"oooohs\" and \"ahhhhs\"",
+    "image": "https://i.imgur.com/9QPuHHN.jpg",
+    "past": true
+  }
+]

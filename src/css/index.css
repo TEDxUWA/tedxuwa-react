@@ -35,10 +35,10 @@ a.link-unset {
 }
 a.link-unset:active,
 a.link-unset:hover {
-  text-decoration: inherit;
-  border: inherit;
-  color: inherit;
-  outline: inherit;
+  text-decoration: none;
+  border: 0;
+  color: unset;
+  outline: none;
 }
 
 .markdown h1,
