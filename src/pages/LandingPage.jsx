@@ -16,7 +16,7 @@ function Opening() {
             <br />Worth Spreading
           </h1>
           <p className="hero-subtext">TEDxUWA: Life After Debt Workshop<br /> 8 Apr 2018</p>
-          <Link to="/events/life-after-debt-workshop"><button className="btn btn-primary text-uppercase">buy ticket</button></Link>
+          <Link to="/events/tedxuwasalon:-life-after-debt"><button className="btn btn-primary text-uppercase">buy ticket</button></Link>
         </div>
       </div>
     </div>

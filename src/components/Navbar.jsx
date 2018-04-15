@@ -11,8 +11,8 @@ class Navbar extends Component {
       links: [
         { to: '/events', text: 'events' },
         { to: '/about', text: 'about' },
+        { to: '/sponsors', text: 'get involved' },
         { to: '/contact', text: 'contact' },
-        { to: '/sponsors', text: 'get involved' }
       ]
     };
   }
@@ -38,7 +38,7 @@ class Navbar extends Component {
               </ul>
             </div>
             <div className="col-sm-4 col-md-2 px-0 d-none d-md-block">
-              <Link to='/events/life-after-debt-workshop'>
+              <Link to='/events/tedxuwasalon:-life-after-debt'>
                 <button className="btn btn-outline-primary text-uppercase fl-right">buy ticket</button>
               </Link>
             </div>

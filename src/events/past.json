@@ -13,7 +13,7 @@
     "type": "salon",
     "date": "2017",
     "location": "",
-    "title": "Biomedical Engineering Salon",
+    "title": "TEDxUWASalon: Biomedical Engineering",
     "blurb": "Held at Harry Perkins Institute of Medical Research, we had a splendid night of talks centred around the importance of mental health.",
     "description": "Held at Harry Perkins Institute of Medical Research, we had a splendid night of talks centred around the importance of mental health.",
     "image": "https://i.imgur.com/cGmdB5G.jpg",
@@ -27,6 +27,16 @@
     "blurb": "The 2nd TEDxUWA Conference brought together a pionering squad of changemakers for a day full of ideas worth spreading. From talks to poetry, workshops to drone races, it was a day to remember.",
     "description": "The 2nd TEDxUWA Conference brought together a pionering squad of changemakers for a day full of ideas worth spreading. From talks to poetry, workshops to drone races, it was a day to remember.",
     "image": "https://i.imgur.com/auHZbX2.jpg",
+    "past": true
+  },
+  {
+    "type": "salon",
+    "date": "2017",
+    "location": "",
+    "title": "TEDxUWASalon: Hear\\Say",
+    "blurb": "Whilst the medical profession is an extraordinarily rewarding one, meeting the high demands of the job can often come at the cost of one's mental health. The recent suicides of several junior doctors have thrown a long overdue spotlight onto this issue. In keeping with this, TEDxUWA and WAMSS Mental Health are proud to announce their collaboration to bring you the TEDxUWASalon: Hear\\Say, the flagship event of WAMSS Mental Health's Hear\\Say initiative which aims to promote and facilitate supportive discussion of mental health among medical students and professionals.",
+    "description": "Whilst the medical profession is an extraordinarily rewarding one, meeting the high demands of the job can often come at the cost of one's mental health. The recent suicides of several junior doctors have thrown a long overdue spotlight onto this issue. In keeping with this, TEDxUWA and WAMSS Mental Health are proud to announce their collaboration to bring you the TEDxUWASalon: Hear\\Say, the flagship event of WAMSS Mental Health's Hear\\Say initiative which aims to promote and facilitate supportive discussion of mental health among medical students and professionals.",
+    "image": "https://images.unsplash.com/photo-1494059980473-813e73ee784b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a02f6067c00a2e7d578c02ece92ebbc5&auto=format&fit=crop&w=1049&q=80",
     "past": true
   },
   {
@@ -53,7 +63,7 @@
     "type": "salon",
     "date": "2016",
     "location": "",
-    "title": "Masterpiece Micro Conference Salon",
+    "title": "TEDxUWASalon: Masterpiece Micro Conference",
     "blurb": "Held in the Lawrence Wilson Art Gallery, the theme was Arts and Culture. It's big, it's broad and had the audience all \"oooohs\" and \"ahhhhs\"",
     "description": "Held in the Lawrence Wilson Art Gallery, the theme was Arts and Culture. It's big, it's broad and had the audience all \"oooohs\" and \"ahhhhs\"",
     "image": "https://i.imgur.com/9QPuHHN.jpg",

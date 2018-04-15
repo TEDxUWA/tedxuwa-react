@@ -5,19 +5,15 @@ import banner from '../assets/slogan.jpg';
 import '../css/SponsorsPage.css';
 
 import guild from '../assets/sponsors/guild.png';
-import wamss from '../assets/sponsors/wamss.png';
-import atomicFrontier from '../assets/sponsors/atomic_frontier.png';
 import uwa from '../assets/sponsors/uwa.png';
 
 const SPONSORS = {
   gold: [
     { logo: guild, name: 'UWA Guild', blurb: 'The UWA Student Guild represents all students at the University of Western Australia and provides various educational and related services.' },
-    { logo: atomicFrontier, name: 'Atomic Frontier', blurb: 'We explore science and adventure from across Perth and around the world. Join us with monthly episodes from atoms to the final frontier.' },
-    { logo: uwa, name: 'University of Western Australia', blurb: `We're a research-intensive university ranked in the world's top 1% of academic institutions. We encourage our students, staff and alumni to explore the unknown, challenge convention and make things happen.` }
+    { logo: uwa, name: 'University of Western Australia', blurb: `We're a research-intensive university ranked in the world's top 1% of academic institutions. We encourage our students, staff and alumni to explore the unknown, challenge convention and make things happen.` },
+    { logo: "https://res-1.cloudinary.com/scentre-group-au/image/fetch/c_pad,f_auto,q_auto/http://res.cloudinary.com/scentre-group-au/image/upload/x8fbv0aqh7muqyja0a9o.png", name: `Utopia` }
   ],
-  silver: [
-    { logo: wamss, name: `The Western Australian Medical Students' Society` }
-  ],
+  silver: [],
   bronze: []
 };
 
@@ -55,40 +51,36 @@ export default class SponsorsPage extends Component {
                 <img src={sponsor.logo} alt={sponsor.name} className='card-img-top py-1 px-3' />
                 <div className="card-body p-1 pt-3">
                   <h3 className='card-title h4 font-weight-bold'>{sponsor.name}</h3>
-                  <p className="card-text">{sponsor.blurb}</p>
                 </div>
               </div>
             ))}
           </div>
-          {!this.state.sponsorsExpanded ? <button className="btn btn-light w-100" onClick={this.expand}>See all</button> : null}
-          {this.state.sponsorsExpanded ?
-            <div>
-              <div className="silver-group row text-center d-flex justify-content-center mb-3">
-                {SPONSORS.silver.map(sponsor => (
-                  <div className="col-sm-6 col-md-4 card border-0" key={sponsor.name}>
-                    <img src={sponsor.logo} alt={sponsor.name} className='card-img-top py-1 px-3' />
-                    <div className="card-body p-1 pt-3">
-                      <h3 className='card-title h4 font-weight-bold'>{sponsor.name}</h3>
-                    </div>
+          <div>
+            <div className="silver-group row text-center d-flex justify-content-center mb-3">
+              {SPONSORS.silver.map(sponsor => (
+                <div className="col-sm-6 col-md-4 card border-0" key={sponsor.name}>
+                  <img src={sponsor.logo} alt={sponsor.name} className='card-img-top py-1 px-3' />
+                  <div className="card-body p-1 pt-3">
+                    <h3 className='card-title h4 font-weight-bold'>{sponsor.name}</h3>
                   </div>
-                ))}
-              </div>
-              <div className="bronze-group row text-center d-flex justify-content-center mb-3">
-                {SPONSORS.bronze.map(sponsor => (
-                  <div className="col-sm-6 col-md-4 card border-0" key={sponsor.name}>
-                    <img src={sponsor.logo} alt={sponsor.name} className='card-img-top py-1 px-3' />
-                  </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-            : null}
+            <div className="bronze-group row text-center d-flex justify-content-center mb-3">
+              {SPONSORS.bronze.map(sponsor => (
+                <div className="col-sm-6 col-md-4 card border-0" key={sponsor.name}>
+                  <img src={sponsor.logo} alt={sponsor.name} className='card-img-top py-1 px-3' />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
         <hr />
         <div className="call-to-action-group bg-light py-4">
           <div className="container py-4">
             <div className="row">
               <div className="col-md-6 mb-4 mb-md-0">
-                <h3 className="font-weight-bold mb-3">Become a sponsors today!</h3>
+                <h3 className="font-weight-bold mb-3">Become a sponsor today!</h3>
                 <p className="lead text-muted">Contact us to discuss how you can help make a difference with TEDxUWA. If your business specialises in venue, catering, marketing, signage, production or merchendise any assistance would be greatly appreciated.</p>
               </div>
               <div className="col-md-6">

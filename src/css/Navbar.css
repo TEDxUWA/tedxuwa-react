@@ -23,6 +23,9 @@
 .navbar .navbar-links .nav-item:hover {
   box-shadow: 0 2px 0 var(--color-grey)
 }
+.navbar .sub-links {
+  position: absolute;
+}
 .logo {
   object-fit: contain;
   max-width: 190px;

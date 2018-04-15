@@ -4,7 +4,10 @@
     "name": "Leanne Jiang",
     "position": "President",
     "links": [
-      {"icon": "fab fa-linkedin", "url": "https://linkedin.com/in/leanne-jiang"}
+      {
+        "icon": "fab fa-linkedin",
+        "url": "https://linkedin.com/in/leanne-jiang"
+      }
     ]
   },
   {
@@ -12,7 +15,10 @@
     "name": "Danielle Shim",
     "position": "Vice President",
     "links": [
-      {"icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/danielle-shim-5680a2153/"}
+      {
+        "icon": "fab fa-linkedin",
+        "url": "https://www.linkedin.com/in/danielle-shim-5680a2153/"
+      }
     ]
   },
   {
@@ -20,28 +26,55 @@
     "name": "Danielle Le Blanc",
     "position": "Secretary",
     "links": [
-      {"icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/danielle-leblanc-41a5b8148/"},
-      {"icon": "fas fa-envelope", "url": "mailto://Secretary.tedxuwa@gmail.com"}
+      {
+        "icon": "fab fa-linkedin",
+        "url": "https://www.linkedin.com/in/danielle-leblanc-41a5b8148/"
+      },
+      {
+        "icon": "fas fa-envelope",
+        "url": "mailto://Secretary.tedxuwa@gmail.com"
+      }
     ]
   },
   {
-    "image": "",
-    "name": "Alex Grant",
-    "position": "Treasurer"
+    "image": "https://dl.airtable.com/Ilue5ODDT6eSkwY5sPck_full_Alex%20Gent_Picture%20(2).jpg",
+    "name": "Alex Gent",
+    "position": "Treasurer",
+    "links": [
+      {
+        "icon": "fab fa-linkedin",
+        "url": "https://www.linkedin.com/in/alex-gent/"
+      }
+    ]
   },
   {
-    "image": "https://dl.airtable.com/xTfKXZ3TkucEJD7jTm8N_full_5B9E0122-0403-44C6-8556-88E2237B6692.jpeg",
-    "name": "Ian Brady",
-    "position": "Head of Marketing & Branding"
+    "image": "https://dl.airtable.com/rOeKBUfRRiSYaVBoGmuA_full_minh_le.jpg",
+    "name": "Minh Le",
+    "position": "Branding Officer",
+    "links": [
+      {
+        "icon": "fab fa-linkedin",
+        "url": "https://www.linkedin.com/in/vietminhle/"
+      }
+    ]
   },
   {
     "image": "https://dl.airtable.com/bj5c1eanQiK5chIUM60G_full_IMG_9407.JPG",
     "name": "Florence Ly",
     "position": "Head of Communications & Sponsorship",
     "links": [
-      {"icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/florencely/"},
-      {"icon": "fas fa-envelope", "url": "mailto://communications.tedxuwa@gmail.com"},
-      {"icon": "fas fa-envelope", "url": "mailto://sponsorship.tedxuwa@gmail.com"}
+      {
+        "icon": "fab fa-linkedin",
+        "url": "https://www.linkedin.com/in/florencely/"
+      },
+      {
+        "icon": "fas fa-envelope",
+        "url": "mailto://communications.tedxuwa@gmail.com"
+      },
+      {
+        "icon": "fas fa-envelope",
+        "url": "mailto://sponsorship.tedxuwa@gmail.com"
+      }
     ]
   },
   {
@@ -54,7 +87,10 @@
     "name": "Talia Strutt",
     "position": "Co-head of Speaker Resources",
     "links": [
-      {"icon": "fab fa-linkedin", "url": "http://linkedin.com/in/talia-strutt-696a35133"}
+      {
+        "icon": "fab fa-linkedin",
+        "url": "http://linkedin.com/in/talia-strutt-696a35133"
+      }
     ]
   },
   {
@@ -67,7 +103,10 @@
     "name": "Marcus Leong",
     "position": "Internal Relations Officer",
     "links": [
-      {"icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/marcusleong95/"}
+      {
+        "icon": "fab fa-linkedin",
+        "url": "https://www.linkedin.com/in/marcusleong95/"
+      }
     ]
   },
   {
@@ -75,15 +114,10 @@
     "name": "Dareen El-Lagta",
     "position": "Graphic Designer",
     "links": [
-      {"icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/dareen-ellagta/"}
-    ]
-  },
-  {
-    "image": "https://dl.airtable.com/rOeKBUfRRiSYaVBoGmuA_full_minh_le.jpg",
-    "name": "Minh Le",
-    "position": "Branding Officer",
-    "links": [
-      {"icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/vietminhle/"}
+      {
+        "icon": "fab fa-linkedin",
+        "url": "https://www.linkedin.com/in/dareen-ellagta/"
+      }
     ]
   },
   {
@@ -91,7 +125,10 @@
     "name": "Sanjeev Poudel",
     "position": "Branding Officer",
     "links": [
-      {"icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/sanjeevdevs/"}
+      {
+        "icon": "fab fa-linkedin",
+        "url": "https://www.linkedin.com/in/sanjeevdevs/"
+      }
     ]
   },
   {
@@ -100,19 +137,14 @@
     "position": "Sponsorships"
   },
   {
-    "image": "https://media.licdn.com/dms/image/C5603AQFGTMRNeip1cw/profile-displayphoto-shrink_800_800/0?e=1528473600&v=beta&t=EvWGLBPAkeVxwWOkmD4ji9HQ5d-5Me5aGDck4ItiUjU",
-    "name": "James Maddeford",
-    "position": "Sponsorships",
+    "image": "https://scontent.fper2-1.fna.fbcdn.net/v/t1.0-9/20229032_851246045031927_8016425883742131801_n.jpg?_nc_cat=0&_nc_eui2=v1%3AAeH5cSI84tMVsmMPMjNKWu37_5CXkrO3JF2u9VaQU2tNlebs1an_6ui7pH019Js0V0f3CAetQMVccwQRYnw1Kd6vrjyHDwIYUJO1wftKwkiemA&oh=d4adff6ba8fb3d9a4fa00d1d5d9d1b90&oe=5B53F6A6",
+    "name": "Anh Le",
+    "position": "Branding Officer",
     "links": [
-      {"icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/jamesmaddeford/"}
-    ]
-  },
-  {
-    "image": "https://scontent.fper2-1.fna.fbcdn.net/v/t1.0-9/18056907_1669449630031655_5761430161724477951_n.jpg?_nc_cat=0&oh=503ef204ea855f9d429e75e7b4fbba51&oe=5B5CBF87",
-    "name": "James Dingley",
-    "position": "IT Officer",
-    "links": [
-      {"icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/jamesdingley/"}
+      {
+        "icon": "fab fa-linkedin",
+        "url": "https://www.linkedin.com/in/anhvietle/"
+      }
     ]
   },
   {
@@ -120,7 +152,10 @@
     "name": "Isha Singh",
     "position": "Communications Officer",
     "links": [
-      {"icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/ishasingh2/"}
+      {
+        "icon": "fab fa-linkedin",
+        "url": "https://www.linkedin.com/in/ishasingh2/"
+      }
     ]
   },
   {
@@ -138,7 +173,10 @@
     "name": "Jaskirat Singh",
     "position": "Social Media Coordinator",
     "links": [
-      {"icon": "fab fa-linkedin", "url": "http://linkedin.com/in/jaskirat-singh-49813312a"}
+      {
+        "icon": "fab fa-linkedin",
+        "url": "http://linkedin.com/in/jaskirat-singh-49813312a"
+      }
     ]
   },
   {
@@ -151,7 +189,10 @@
     "name": "Divya Bappoo",
     "position": "Speaker Resources Officer",
     "links": [
-      {"icon": "fab fa-linkedin", "url": "www.linkedin.com/in/divya-bappoo"}
+      {
+        "icon": "fab fa-linkedin",
+        "url": "www.linkedin.com/in/divya-bappoo"
+      }
     ]
   },
   {
@@ -159,7 +200,10 @@
     "name": "Mytreye Manikyam",
     "position": "Speaker Resources Officer",
     "links": [
-      {"icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/mytreye-manikyam-584319a1/"}
+      {
+        "icon": "fab fa-linkedin",
+        "url": "https://www.linkedin.com/in/mytreye-manikyam-584319a1/"
+      }
     ]
   },
   {
