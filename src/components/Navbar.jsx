@@ -38,7 +38,9 @@ class Navbar extends Component {
               </ul>
             </div>
             <div className="col-sm-4 col-md-2 px-0 d-none d-md-block">
-              <button className="btn btn-outline-primary text-uppercase fl-right">buy ticket</button>
+              <Link to='/events/life-after-debt-workshop'>
+                <button className="btn btn-outline-primary text-uppercase fl-right">buy ticket</button>
+              </Link>
             </div>
             <div className="col-2 d-block d-md-none px-0" onClick={this.toggleNav}>
               <i className="fas fa-bars fl-right" />

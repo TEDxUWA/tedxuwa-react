@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo_dark from "../assets/logo_dark-no_padding.svg";
 import "../css/Footer.css";
 
@@ -10,7 +10,7 @@ class Footer extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-2">
-              <Link to="/"><img src={logo_dark} alt="TEDxUWA logo" className="logo d-none d-sm-block"/></Link>
+              <Link to="/"><img src={logo_dark} alt="TEDxUWA logo" className="logo d-none d-sm-block" /></Link>
               <ul className="contact-info-group list-unstyled">
                 <li>0420 613 222</li>
                 <li><a href="mailto:tedxuwa@gmail.com">tedxuwa@gmail.com</a></li>
@@ -33,7 +33,7 @@ class Footer extends Component {
             <div className="col-md-2 collaborate-group">
               <h4>Get Involved</h4>
               <ul className="list-unstyled">
-                <li><Link to="/sponsors">Volunteer</Link></li>
+                <li><Link to="/contact">Volunteer</Link></li>
                 <li><Link to="/sponsors">Work with us</Link></li>
               </ul>
             </div>
