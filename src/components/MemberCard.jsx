@@ -18,8 +18,8 @@ class MemberCard extends Component {
         {match =>
           <div className="card border-0 member" onMouseOver={this.toggleDetails} onMouseOut={this.toggleDetails}>
             <div className="photo-group">
-              {member.image
-                ? <img src={member.image} alt={member.name} className={`card-img${match ? '-top' : ''}`} />
+              {member.profile_picture_url
+                ? <img src={member.profile_picture_url} alt={member.name} className={`card-img${match ? '-top' : ''}`} />
                 : <h1 className="display-1 font-weight-bold m-auto photo-placeholder">{this.getInitials(member.name)}</h1>
               }
             </div>
@@ -29,7 +29,7 @@ class MemberCard extends Component {
             >
               <div className="bottom-stuck py-3 rounded-bottom">
                 <h4 className="card-title mb-0 font-weight-bold">{member.name}</h4>
-                <p className="card-text">{member.position}</p>
+                <p className="card-text">{member.bio}</p>
                 {member.links ?
                   <div className="links-group">
                     <ul className="list-unstyled list-inline">

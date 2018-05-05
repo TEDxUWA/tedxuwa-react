@@ -2,7 +2,7 @@ import { Component } from 'react';
 import GA from 'react-ga';
 
 if (process.env.NODE_ENV === 'production') {
-  GA.initialize('UA-117422701-1', {
+  GA.initialize('UA-117422701-2', {
     debug: false,
     titleCase: false,
   });

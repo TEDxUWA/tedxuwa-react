@@ -3,24 +3,40 @@ import landing_illustration from "../assets/landing_illustration.png";
 import { Link } from "react-router-dom";
 import speaker_icon from "../assets/speaker.png";
 import { SPEAKER_REGISTRATION_LINK } from "../services/Globals";
+import API from '../services/Api';
+import dayjs from 'dayjs';
+import slugify from 'slugify';
 import "../css/LandingPage.css";
 
-function Opening() {
-  return (
-    <div className="landing opening">
-      <img src={landing_illustration} alt="TEDxUWA" className="bg-image" />
-      <div className="container">
-        <div className="hero-container">
-          <h1 className="hero-text">
-            <span className="text-primary">Ideas</span>
-            <br />Worth Spreading
-          </h1>
-          <p className="hero-subtext">TEDxUWA: Life After Debt Workshop<br /> 8 Apr 2018</p>
-          <Link to="/events/tedxuwasalon:-life-after-debt"><button className="btn btn-primary text-uppercase">buy ticket</button></Link>
+class Opening extends Component {
+  state = {
+    featuredEvent: {}
+  }
+  componentDidMount = () => {
+    API.GET('events').then(data => {
+      const featuredEvent = data.results.find(e => e.featured) || {};
+      this.setState({ featuredEvent });
+    });
+  }
+  render() {
+    const featured = this.state.featuredEvent;
+    const date = featured.start ? dayjs(featured.start).format('dddd, D MMMM YYYY') : "";
+    return (
+      <div className="landing opening">
+        <img src={landing_illustration} alt="TEDxUWA" className="bg-image" />
+        <div className="container">
+          <div className="hero-container">
+            <h1 className="hero-text">
+              <span className="text-primary">Ideas</span>
+              <br />Worth Spreading
+            </h1>
+            <p className="hero-subtext">{featured.name}<br /> {date}</p>
+            <Link to={`/events/${featured.id}/${slugify(featured.name || "", { lower: true })}`}><button className="btn btn-primary text-uppercase">buy ticket</button></Link>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 function Speaker() {
   return (

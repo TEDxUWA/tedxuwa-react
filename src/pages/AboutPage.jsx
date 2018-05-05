@@ -3,15 +3,17 @@ import PageHeader from "../components/PageHeader";
 import SpeakerRegistrationSection from "../components/SpeakerRegistrationSection";
 import MemberCard from "../components/MemberCard";
 import banner from '../assets/team.jpg';
-import TEAM from '../teamMembers.json';
+import API from '../services/Api';
 
 class AboutPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      team: TEAM,
-      max: 4
-    };
+  state = {
+    team: [],
+    max: 4
+  };
+  componentDidMount = () => {
+    API.GET('committee').then(data => {
+      this.setState({ team: data.results });
+    });
   }
   showAll = () => this.setState({ max: this.state.team.length });
   render() {
