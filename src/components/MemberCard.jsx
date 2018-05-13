@@ -12,15 +12,15 @@ class MemberCard extends Component {
   toggleDetails = () => this.setState({ showDetails: !this.state.showDetails });
   getInitials = (name) => name.split(' ').map(part => part.split('')[0]).join('');
   render() {
-    const member = this.props.data;
+    const data = this.props.data;
     return (
       <Media query='(max-width: 768px)'>
         {match =>
           <div className="card border-0 member" onMouseOver={this.toggleDetails} onMouseOut={this.toggleDetails}>
             <div className="photo-group">
-              {member.profile_picture_url
-                ? <img src={member.profile_picture_url} alt={member.name} className={`card-img${match ? '-top' : ''}`} />
-                : <h1 className="display-1 font-weight-bold m-auto photo-placeholder">{this.getInitials(member.name)}</h1>
+              {data.member.profile_picture_url
+                ? <img src={data.member.profile_picture_url} alt={data.member.name} className={`card-img${match ? '-top' : ''}`} />
+                : <h1 className="display-1 font-weight-bold m-auto photo-placeholder">{this.getInitials(data.member.name)}</h1>
               }
             </div>
             <div
@@ -28,16 +28,14 @@ class MemberCard extends Component {
               hidden={!match && !this.state.showDetails}
             >
               <div className="bottom-stuck py-3 rounded-bottom">
-                <h4 className="card-title mb-0 font-weight-bold">{member.name}</h4>
-                <p className="card-text">{member.bio}</p>
-                {member.links ?
+                <h4 className="card-title mb-0 font-weight-bold">{data.member.name}</h4>
+                <p className="card-text">{data.position}</p>
+                {data.linkedin_url ?
                   <div className="links-group">
                     <ul className="list-unstyled list-inline">
-                      {member.links.map(link => (
-                        <li className="list-inline-item" key={link.url}>
-                          <a href={link.url} target='_blank' rel='noopener noreferrer' className={`${!match ? 'text-white' : 'text-dark'}`}><i className={link.icon} /></a>
-                        </li>
-                      ))}
+                      <li className="list-inline-item">
+                        <a href={data.linkedin_url} target='_blank' rel='noopener noreferrer' className={`${!match ? 'text-white' : 'text-dark'}`}><i className='fab fa-linkedin' /></a>
+                      </li>
                     </ul>
                   </div>
                   : null}
