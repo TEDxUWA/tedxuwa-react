@@ -26,7 +26,7 @@
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
         n.callMethod ?
-        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       };
       if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
       n.queue = []; t = b.createElement(e); t.async = !0;
@@ -95,7 +95,7 @@
   </noscript>
   <div class="loading-placeholder">
     <div class="center-content">
-      <img src="./logo_dark-no_padding.svg" alt="tedxuwa">
+      <img src="%PUBLIC_URL%/logo_dark-no_padding.svg" alt="tedxuwa">
       <div class="loader"></div>
     </div>
   </div>
