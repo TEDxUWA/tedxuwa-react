@@ -21,6 +21,7 @@ class Opening extends Component {
   render() {
     const featured = this.state.featuredEvent;
     const date = featured.start ? dayjs(featured.start).format('dddd, D MMMM YYYY') : "";
+    const ticketPath = featured.name ? `${featured.id}/${slugify(featured.name || "", { lower: true })}` : '';
     return (
       <div className="landing opening">
         <img src={landing_illustration} alt="TEDxUWA" className="bg-image" />
@@ -31,7 +32,7 @@ class Opening extends Component {
               <br />Worth Spreading
             </h1>
             <p className="hero-subtext">{featured.name}<br /> {date}</p>
-            <Link to={`/events/${featured.id}/${slugify(featured.name || "", { lower: true })}`}><button className="btn btn-primary text-uppercase">buy ticket</button></Link>
+            <Link to={`/events/${ticketPath}`}><button className="btn btn-primary text-uppercase">buy tickets</button></Link>
           </div>
         </div>
       </div>

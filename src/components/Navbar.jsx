@@ -41,6 +41,7 @@ class Navbar extends Component {
   render() {
     const currentPath = this.props.location.pathname;
     const featured = this.state.featuredEvent;
+    const ticketPath = featured.name ? `${featured.id}/${slugify(featured.name || "", { lower: true })}` : '';
     return (
       <div>
         <nav className="navbar fixed-top text-uppercase px-0 py-2">
@@ -76,8 +77,8 @@ class Navbar extends Component {
               </ul>
             </div>
             <div className="col-sm-4 col-md-2 px-0 d-none d-md-block">
-              <Link to={`/events/${featured.id}/${slugify(featured.name || "", { lower: true })}`}>
-                <button className="btn btn-outline-primary text-uppercase fl-right">buy ticket</button>
+              <Link to={`/events/${ticketPath}`}>
+                <button className="btn btn-outline-primary text-uppercase fl-right">buy tickets</button>
               </Link>
             </div>
             <div className="col-2 d-block d-md-none px-0" onClick={this.toggleNav}>
