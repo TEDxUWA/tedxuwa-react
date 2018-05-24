@@ -10,8 +10,8 @@ class Navbar extends Component {
   state = {
     showNav: false,
     links: [
-      { to: '/events', text: 'events' },
       { to: '/about', text: 'about' },
+      { to: '/events', text: 'events' },
       {
         to: '/sponsors', text: 'get involved', subLinks: [
           { to: '/sponsors', text: 'Become a partner' },
