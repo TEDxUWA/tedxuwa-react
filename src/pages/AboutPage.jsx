@@ -19,7 +19,7 @@ class AboutPage extends Component {
   render() {
     return (
       <div className="about page">
-        <PageHeader title="About Us" lead="We seek to find and share ideas from arround the world and closer to home with the UWA community. We are students from the University of Western Australia , we are TEDxUWA." root='/about' image={banner} />
+        <PageHeader title="About Us" lead="We seek to find and share ideas from arround the world and closer to home with the UWA community. We are students from the University of Western Australia, we are TEDxUWA." root='/about' image={banner} />
         <div className="container py-4 px-0">
           <div className="tedx-group col-md-7">
             <h3 className="font-weight-bold mb-2">What is TEDx</h3>
