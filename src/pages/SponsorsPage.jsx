@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PageHeader from '../components/PageHeader';
 import ContactForm from '../components/ContactForm';
+import Reach from '../components/Reach';
 import banner from '../assets/slogan.jpg';
 import '../css/SponsorsPage.css';
 
@@ -116,6 +117,7 @@ export default class SponsorsPage extends Component {
           </div>
         </div>
         <hr />
+        <Reach />
         <div className="call-to-action-group bg-light py-4">
           <div className="container py-4">
             <div className="row">
