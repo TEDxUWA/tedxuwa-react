@@ -38,10 +38,10 @@ const Reach = () => {
           </div>
         </div>
       </div>
-      <hr />
+      {/* <hr />
       <button className="btn btn-link bg-dark text-white py-3 text-center border-radius-0 w-100">
         Download our prospectus&nbsp;&#x25BE;
-      </button>
+      </button> */}
       <hr />
     </div>
   );

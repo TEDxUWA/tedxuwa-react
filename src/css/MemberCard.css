@@ -1,9 +1,9 @@
 .member.card .card-img-overlay {
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .member.card .card-img,
 .member.card .card-img-top {
-  height: 250px;
+  height: 270px;
   object-fit: cover;
   object-position: center;
 }
@@ -12,10 +12,10 @@
   height: 0;
   padding-bottom: 100%;
   background-size: cover;
-  margin-top: 0.10rem;
+  margin-top: 0.1rem;
 }
 .member.card .photo-placeholder {
-  height: 250px;
+  height: 370px;
   text-align: center;
   background-color: var(--color-shade-2);
   color: var(--color-shade-1);
@@ -24,11 +24,4 @@
   position: absolute;
   bottom: 0;
   width: calc(100% - 2rem);
-}
-@media screen and (max-width: 768px) {
-  .member.card .card-img,
-  .member.card .card-img-top,
-  .member.card .photo-placeholder {
-    height: 200px;
-  }
 }
