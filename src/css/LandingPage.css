@@ -14,7 +14,6 @@
   left: 0;
   width: 100%;
   height: calc(100vh - 135px);
-  max-height: 600px;
   min-height: 480px;
   object-fit: cover;
   object-position: center;
