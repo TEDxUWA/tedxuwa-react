@@ -35,6 +35,9 @@ export default class SponsorsPage extends Component {
   state = {
     sponsorsExpanded: false
   };
+  componentDidMount() {
+    document.title = 'TEDxUWA | Work with us';
+  }
   expand = () => this.setState({ sponsorsExpanded: true });
   render() {
     return (

@@ -12,12 +12,12 @@ class Opening extends Component {
   state = {
     featuredEvent: {}
   };
-  componentDidMount = () => {
+  componentDidMount() {
     API.GET('events').then(data => {
       const featuredEvent = data.results.find(e => e.featured) || {};
       this.setState({ featuredEvent });
     });
-  };
+  }
   render() {
     const featured = this.state.featuredEvent;
     const date = featured.start

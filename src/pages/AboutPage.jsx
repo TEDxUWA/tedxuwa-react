@@ -10,11 +10,12 @@ class AboutPage extends Component {
     team: [],
     max: 4
   };
-  componentDidMount = () => {
+  componentDidMount() {
     API.GET('committee').then(data => {
       this.setState({ team: data.results });
     });
-  };
+    document.title = 'TEDxUWA | About us';
+  }
   showAll = () => this.setState({ max: this.state.team.length });
   render() {
     return (
