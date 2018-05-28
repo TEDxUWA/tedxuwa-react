@@ -61,7 +61,7 @@ function Speaker() {
           <div className="col-md-7">
             <h2>Want to speak at an event?</h2>
             <h4>
-              Do you have an idea worth spreading? A tallent you want to share
+              Do you have an idea worth spreading? A talent you want to share
               with the world? Applications for 2018 speakers are now open. Let
               us know what you would like to share, and we will find you an
               audience!
