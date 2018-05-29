@@ -18,7 +18,7 @@ class ContactPage extends Component {
               <div className="row">
                 <div className="col-12 mb-3">
                   <a
-                    href="mailto:president.tedxuwa@gmail.com"
+                    href="mailto:president@tedxuwa.com"
                     className="link-unset"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -28,7 +28,7 @@ class ContactPage extends Component {
                         <h3 className="card-title">Leanne Jiang</h3>
                         <p className="card-text">President</p>
                         <p className="card-text text-muted">
-                          president.tedxuwa@gmail.com
+                          president@tedxuwa.com
                         </p>
                       </div>
                     </div>
@@ -36,7 +36,7 @@ class ContactPage extends Component {
                 </div>
                 <div className="col-12 mb-3">
                   <a
-                    href="mailto:communications.tedxuwa@gmail.com"
+                    href="mailto:communications@tedxuwa.com"
                     className="link-unset"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -46,10 +46,7 @@ class ContactPage extends Component {
                         <h3 className="card-title">Florence Ly</h3>
                         <p className="card-text">Head of Communications</p>
                         <p className="card-text text-muted">
-                          communications.tedxuwa@gmail.com
-                        </p>
-                        <p className="card-text text-muted">
-                          sponsorship.tedxuwa@gmail.com
+                          communications@tedxuwa.com
                         </p>
                       </div>
                     </div>
@@ -59,7 +56,7 @@ class ContactPage extends Component {
                   <div className="card rounded-0 border-0">
                     <div className="card-body">
                       <h3 className="card-title">Other enquiries</h3>
-                      <p className="card-text text-muted">tedxuwa@gmail.com</p>
+                      <p className="card-text text-muted">hello@tedxuwa.com</p>
                       <p className="card-text text-muted">0420 613 222</p>
                     </div>
                   </div>
