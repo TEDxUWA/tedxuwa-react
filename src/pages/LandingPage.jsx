@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import landing_illustration from '../assets/tp_date_teaser.png';
+import landing_illustration from '../assets/exposition_background.png';
 import { Link } from 'react-router-dom';
 import speaker_icon from '../assets/speaker.png';
 import { SPEAKER_REGISTRATION_LINK } from '../services/Globals';
@@ -32,8 +32,8 @@ class Opening extends Component {
         <div className="container">
           <div className="hero-container">
             <h1 className="hero-text">
-              <span className="text-primary">06.10.18</span>
-              <br />Save the date.
+              <span className="text-primary">Creativity</span>
+              <br />worth spreading
             </h1>
             <p className="hero-subtext">
               {featured.name}
