@@ -33,7 +33,8 @@ class Opening extends Component {
           <div className="hero-container">
             <h1 className="hero-text">
               <span className="text-primary">13.10.18</span>
-              <br />Turning Points
+              <br />
+              Turning Points
             </h1>
             <p className="hero-subtext">
               {featured.name}
@@ -62,11 +63,10 @@ function Speaker() {
             <h2>Want to speak at an event?</h2>
             <h4>
               Do you have an idea worth spreading? A talent you want to share
-              with the world? Applications for 2018 speakers are now open. Let
-              us know what you would like to share, and we will find you an
-              audience!
+              with the world? Applications for 2018 speakers are now closed but
+              keep an eye our for the TEDxUWA 2019 speaker applications!
             </h4>
-            <a
+            {/* <a
               href={SPEAKER_REGISTRATION_LINK}
               rel="noreferrer noopener"
               target="_blank"
@@ -74,7 +74,7 @@ function Speaker() {
               className="btn btn-light"
             >
               Learn more
-            </a>
+            </a> */}
           </div>
           <div className="col-md-5 d-none d-sm-block">
             <img src={speaker_icon} alt="Want speak at an event?" />
@@ -105,7 +105,8 @@ function Intro() {
             to="/about"
             className="link-unset text-primary font-weight-bold"
           >
-            Learn more about what we do&nbsp;<i className="fa fa-arrow-right" />
+            Learn more about what we do&nbsp;
+            <i className="fa fa-arrow-right" />
           </Link>
         </div>
       </div>
