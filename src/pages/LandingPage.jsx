@@ -64,7 +64,7 @@ function Speaker() {
             <h4>
               Do you have an idea worth spreading? A talent you want to share
               with the world? Applications for 2018 speakers are now closed but
-              keep an eye our for the TEDxUWA 2019 speaker applications!
+              keep an eye our for TEDxUWA 2019 speaker applications!
             </h4>
             {/* <a
               href={SPEAKER_REGISTRATION_LINK}
