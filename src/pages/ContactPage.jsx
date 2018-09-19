@@ -43,7 +43,7 @@ class ContactPage extends Component {
                   >
                     <div className="card rounded-0 card-hover">
                       <div className="card-body">
-                        <h3 className="card-title">Florence Ly</h3>
+                        <h3 className="card-title">Daniel Chen</h3>
                         <p className="card-text">Head of Communications</p>
                         <p className="card-text text-muted">
                           communications@tedxuwa.com
