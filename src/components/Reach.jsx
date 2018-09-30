@@ -8,7 +8,7 @@ const Reach = () => {
         <div className="row mt-0 mt-md-4">
           <div className="col-md-4 mt-4 mt-md-0">
             <strong className="display-4 font-weight-bold text-primary">
-              2.1k
+              2.5k
             </strong>
             <p>
               <strong>Followers</strong>
@@ -18,7 +18,7 @@ const Reach = () => {
           </div>
           <div className="col-md-4 mt-4 mt-md-0">
             <strong className="display-4 font-weight-bold text-primary">
-              54
+              70
             </strong>
             <p>
               <strong>Speakers</strong>
@@ -28,7 +28,7 @@ const Reach = () => {
           </div>
           <div className="col-md-4 mt-4 mt-md-0">
             <strong className="display-4 font-weight-bold text-primary">
-              565
+              854
             </strong>
             <p>
               <strong>Subscribers</strong>
