@@ -22,7 +22,7 @@ class AboutPage extends Component {
       <div className="about page">
         <PageHeader
           title="About Us"
-          lead="We seek to find and share ideas from arround the world and closer to home with the UWA community. We are students from the University of Western Australia, we are TEDxUWA."
+          lead="We seek to find and share ideas from around the world and closer to home with the UWA community. We are students from the University of Western Australia, we are TEDxUWA."
           root="/about"
           image={banner}
         />
@@ -74,10 +74,12 @@ class AboutPage extends Component {
                 Follow TED on Twitter at&nbsp;
                 <a href="http://twitter.com/TEDTalks">
                   http://twitter.com/TEDTalks
-                </a>, or on Facebook at&nbsp;
+                </a>
+                , or on Facebook at&nbsp;
                 <a href="http://www.facebook.com/TED">
                   http://www.facebook.com/TED
-                </a>.
+                </a>
+                .
               </span>
             </div>
           </div>
@@ -93,9 +95,9 @@ class AboutPage extends Component {
               </div>
               <div className="col-md-6">
                 <p className="lead mb-3">
-                  TEDxUWA aims to spread good ideas among the UWA community.
-                  Creating a synergy of ideas between different disciplines and
-                  people
+                  TEDxUWA aims to spread good ideas among the UWA community;
+                  creating a synergy of ideas between different faculties and
+                  people.
                 </p>
               </div>
             </div>
