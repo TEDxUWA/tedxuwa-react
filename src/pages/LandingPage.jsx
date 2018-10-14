@@ -32,9 +32,9 @@ class Opening extends Component {
         <div className="container">
           <div className="hero-container">
             <h1 className="hero-text">
-              <span className="text-primary">13.10.18</span>
+              <span className="text-primary">Ideas</span>
               <br />
-              Turning Points
+              Worth Spreading
             </h1>
             <p className="hero-subtext">
               {featured.name}

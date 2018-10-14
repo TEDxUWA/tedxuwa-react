@@ -14,9 +14,9 @@ class Navbar extends Component {
       { to: '/events', text: 'events' },
       {
         to: '/sponsors', text: 'get involved', subLinks: [
-          { to: '/sponsors', text: 'Become a partner' },
-          { to: SPEAKER_REGISTRATION_LINK, absolute: true, text: 'Become a speaker' },
-          { to: '/contact', text: 'Become a Volunteer' }
+          { to: '/sponsors', text: 'Partners' },
+          { to: SPEAKER_REGISTRATION_LINK, absolute: true, text: 'Speakers' },
+          { to: '/contact', text: 'Volunteers' }
         ]
       },
       { to: '/contact', text: 'contact' },
@@ -61,7 +61,7 @@ class Navbar extends Component {
                     onMouseLeave={() => this.toggleNavHover(link)}>
                     <Link to={link.to}>{link.text}</Link>
                     {link.subLinks && this.state.hovering.includes(link.to)
-                      ? <ul className="sub-links bg-white border-bottom py-3">
+                      ? <ul className="sub-links bg-white border-bottom p-2">
                         {link.subLinks.map(subLink =>
                           <li key={subLink.to} className='py-2 px-2 border-top border-bottom d-block'>
                             {subLink.absolute

@@ -5,30 +5,49 @@ import Reach from '../components/Reach';
 import banner from '../assets/slogan.jpg';
 import '../css/SponsorsPage.css';
 
-import guild from '../assets/sponsors/guild.png';
+import ey from '../assets/sponsors/ey.png';
 import uwa from '../assets/sponsors/uwa.png';
+import chobani from '../assets/sponsors/chobani.png';
+import thegoodgrocer from '../assets/sponsors/thegoodgrocer.png';
+import officeworks from '../assets/sponsors/officeworks.png';
+import biopak from '../assets/sponsors/biopak.png';
 
 const SPONSORS = {
   gold: [
     {
-      logo: guild,
-      name: 'UWA Guild',
-      blurb:
-        'The UWA Student Guild represents all students at the University of Western Australia and provides various educational and related services.'
+      logo: ey,
+      name: 'EY'
     },
     {
       logo: uwa,
-      name: 'University of Western Australia',
-      blurb: `We're a research-intensive university ranked in the world's top 1% of academic institutions. We encourage our students, staff and alumni to explore the unknown, challenge convention and make things happen.`
-    },
+      name: 'UWA Graduate Research School'
+    }
+  ],
+  silver: [
     {
       logo:
         'https://res-1.cloudinary.com/scentre-group-au/image/fetch/c_pad,f_auto,q_auto/http://res.cloudinary.com/scentre-group-au/image/upload/x8fbv0aqh7muqyja0a9o.png',
       name: `Utopia`
+    },
+    {
+      logo: officeworks,
+      name: `Officeworks`
+    },
+    {
+      logo: biopak,
+      name: `BioPak`
     }
   ],
-  silver: [],
-  bronze: []
+  bronze: [
+    {
+      logo: chobani,
+      name: 'Chobani'
+    },
+    {
+      logo: thegoodgrocer,
+      name: 'The Good Grocer'
+    },
+  ]
 };
 
 export default class SponsorsPage extends Component {
@@ -73,7 +92,7 @@ export default class SponsorsPage extends Component {
                 <img
                   src={sponsor.logo}
                   alt={sponsor.name}
-                  className="card-img-top py-1 px-3"
+                  className="card-img-top p-1"
                 />
                 <div className="card-body p-1 pt-3">
                   <h3 className="card-title h4 font-weight-bold">
@@ -93,7 +112,7 @@ export default class SponsorsPage extends Component {
                   <img
                     src={sponsor.logo}
                     alt={sponsor.name}
-                    className="card-img-top py-1 px-3"
+                    className="card-img-top p-3"
                   />
                   <div className="card-body p-1 pt-3">
                     <h3 className="card-title h4 font-weight-bold">
@@ -112,8 +131,13 @@ export default class SponsorsPage extends Component {
                   <img
                     src={sponsor.logo}
                     alt={sponsor.name}
-                    className="card-img-top py-1 px-3"
+                    className="card-img-top p-3"
                   />
+                  <div className="card-body p-1 pt-3">
+                    <h3 className="card-title h4 font-weight-bold">
+                      {sponsor.name}
+                    </h3>
+                  </div>
                 </div>
               ))}
             </div>
