@@ -24,7 +24,10 @@ class Opening extends Component {
       ? dayjs(featured.start).format('dddd, D MMMM YYYY')
       : '';
     const ticketPath = featured.name
-      ? `${featured.id}/${slugify(featured.name || '', { lower: true })}`
+      ? `${featured.id}/${slugify(featured.name || '', {
+          lower: true,
+          remove: /[*+~.()'"!:@]/g
+        })}`
       : '';
     return (
       <div className="landing opening">

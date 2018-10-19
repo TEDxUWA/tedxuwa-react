@@ -6,7 +6,7 @@ import dayjs from 'dayjs';
 const EventCard = ({ data }) => {
   const start = dayjs(data.start).format('dddd, D MMMM YYYY');
   return (
-    <Link to={`/events/${data.id}/${slugify(data.name, { lower: true })}`} className='link-unset'>
+    <Link to={`/events/${data.id}/${slugify(data.name, { lower: true, remove: /[*+~.()'"!:@]/g })}`} className='link-unset'>
       <div className="event card rounded-0 card-hover">
         <img src={data.banner_image} alt={data.name} className="card-img-top img-fluid rounded-0" style={{ maxHeight: '200px' }} />
         <div className="card-img-overlay" style={{ maxHeight: '200px' }}>
