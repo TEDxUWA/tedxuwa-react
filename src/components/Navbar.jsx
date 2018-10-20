@@ -5,6 +5,7 @@ import { SPEAKER_REGISTRATION_LINK } from '../services/Globals';
 import slugify from 'slugify';
 import API from '../services/Api';
 import '../css/Navbar.css';
+import { slugConfig } from '../global/constants';
 
 class Navbar extends Component {
   state = {
@@ -45,10 +46,7 @@ class Navbar extends Component {
     const currentPath = this.props.location.pathname;
     const featured = this.state.featuredEvent;
     const ticketPath = featured.name
-      ? `${featured.id}/${slugify(featured.name || '', {
-          lower: true,
-          remove: /[*+~.()'"!:@]/g
-        })}`
+      ? `${featured.id}/${slugify(featured.name || '', slugConfig)}`
       : '';
     return (
       <div>

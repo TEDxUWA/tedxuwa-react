@@ -7,15 +7,15 @@ import API from '../services/Api';
 import dayjs from 'dayjs';
 import slugify from 'slugify';
 import '../css/LandingPage.css';
+import { slugConfig } from '../global/constants';
 
 class Opening extends Component {
   state = {
     featuredEvent: {}
   };
   componentDidMount() {
-    API.GET('events').then(data => {
-      const featuredEvent = data.results.find(e => e.featured) || {};
-      this.setState({ featuredEvent });
+    API.GET('events/?featured').then(data => {
+      this.setState({ featuredEvent: data });
     });
   }
   render() {
@@ -24,10 +24,7 @@ class Opening extends Component {
       ? dayjs(featured.start).format('dddd, D MMMM YYYY')
       : '';
     const ticketPath = featured.name
-      ? `${featured.id}/${slugify(featured.name || '', {
-          lower: true,
-          remove: /[*+~.()'"!:@]/g
-        })}`
+      ? `${featured.id}/${slugify(featured.name || '', slugConfig)}`
       : '';
     return (
       <div className="landing opening">

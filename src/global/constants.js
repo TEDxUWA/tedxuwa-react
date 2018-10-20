@@ -1,0 +1,1 @@
+export const slugConfig = { lower: true, remove: /[*+~.()'"!:@]/g };

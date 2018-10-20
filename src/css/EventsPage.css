@@ -7,8 +7,14 @@
   margin-bottom: 0;
 }
 .events.page .jumbotron .bottom-stuck {
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
   bottom: 0;
   left: 0;
+}
+.events.page .speakers-list {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  white-space: nowrap;
 }
