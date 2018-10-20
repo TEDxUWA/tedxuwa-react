@@ -23,7 +23,7 @@ class EventDetail extends Component {
   render() {
     const { event = {}, speakers = [] } = this.state;
     const start = dayjs(event.start).format('dddd, D MMMM YYYY');
-    console.log(event);
+    const isPastEvent = dayjs(event.start).isBefore(dayjs());
     return (
       <div>
         <div
@@ -58,11 +58,13 @@ class EventDetail extends Component {
           <div className="row">
             <div className="col-md-7 mb-4">
               <ReactMarkdown source={event.description} className="markdown" />
-              <a href={event.ticket_url} className="link-unset">
-                <button className="btn btn-primary btn-block">
-                  Get tickets
-                </button>
-              </a>
+              {!isPastEvent ? (
+                <a href={event.ticket_url} className="link-unset">
+                  <button className="btn btn-primary btn-block">
+                    Get tickets
+                  </button>
+                </a>
+              ) : null}
             </div>
             <div className="col-md-5">
               <div className="rounded-0 p-3">
@@ -71,12 +73,13 @@ class EventDetail extends Component {
                 <p>{start}</p>
                 <h5 className="font-weight-bold mb-1 mt-3">Location</h5>
                 <p>{event.location}</p>
-
-                <a href={event.ticket_url} className="link-unset">
-                  <button className="btn btn-primary btn-block mt-3">
-                    Buy tickets
-                  </button>
-                </a>
+                {!isPastEvent ? (
+                  <a href={event.ticket_url} className="link-unset">
+                    <button className="btn btn-primary btn-block mt-3">
+                      Buy tickets
+                    </button>
+                  </a>
+                ) : null}
               </div>
             </div>
           </div>
