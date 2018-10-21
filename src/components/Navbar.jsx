@@ -57,7 +57,7 @@ class Navbar extends Component {
                 <img
                   src={logo_dark}
                   alt="TEDxUWA"
-                  className="navbar-brand logo img-fluid"
+                  className="navbar-brand logo"
                 />
               </Link>
             </div>
