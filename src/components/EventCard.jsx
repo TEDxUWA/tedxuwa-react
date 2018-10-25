@@ -16,7 +16,7 @@ const EventCard = ({ data }) => {
           src={data.banner_image}
           alt={data.name}
           className="card-img-top img-fluid rounded-0"
-          style={{ maxHeight: '200px' }}
+          style={{ height: '200px', objectFit: 'cover' }}
         />
         <div className="card-img-overlay" style={{ maxHeight: '200px' }}>
           <span className="badge badge-dark text-uppercase">
