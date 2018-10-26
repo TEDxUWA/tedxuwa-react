@@ -15,6 +15,10 @@ export default class ContactForm extends Component {
       category: 'Relationships',
       label: 'Contact Form'
     });
+    window.analytics.identify(this.state.email, {
+      email: this.state.email,
+      name: this.state.name
+    });
     const subject = `Enquiry from ${this.state.name}`;
     const body = `${this.state.message}%0D%0A%0D%0ABy ${this.state.name} at ${
       this.state.email
