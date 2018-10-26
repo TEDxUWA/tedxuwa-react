@@ -20,6 +20,12 @@ class EventDetail extends Component {
       this.setState({ speakers: data.results });
     });
   }
+  trackLink = () => {
+    window.analytics.track('Visit Ticketing Site', {
+      category: 'Event',
+      label: this.state.event.name
+    })
+  }
   render() {
     const { event = {}, speakers = [] } = this.state;
     const start = dayjs(event.start).format('dddd, D MMMM YYYY');
@@ -59,7 +65,7 @@ class EventDetail extends Component {
             <div className="col-md-7 mb-4">
               <ReactMarkdown source={event.description} className="markdown" />
               {!isPastEvent ? (
-                <a href={event.ticket_url} className="link-unset">
+                <a href={event.ticket_url} className="link-unset" onClick={this.trackLink}>
                   <button className="btn btn-primary btn-block">
                     Get tickets
                   </button>
@@ -74,7 +80,7 @@ class EventDetail extends Component {
                 <h5 className="font-weight-bold mb-1 mt-3">Location</h5>
                 <p>{event.location}</p>
                 {!isPastEvent ? (
-                  <a href={event.ticket_url} className="link-unset">
+                  <a href={event.ticket_url} className="link-unset" onClick={this.trackLink}>
                     <button className="btn btn-primary btn-block mt-3">
                       Buy tickets
                     </button>

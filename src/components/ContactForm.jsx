@@ -11,6 +11,10 @@ export default class ContactForm extends Component {
   handleMessageChange = e => this.setState({ message: e.target.value });
   handleSubmit = e => {
     e.preventDefault();
+    window.analytics.track('Contacted', {
+      category: 'Relationships',
+      label: 'Contact Form'
+    });
     const subject = `Enquiry from ${this.state.name}`;
     const body = `${this.state.message}%0D%0A%0D%0ABy ${this.state.name} at ${
       this.state.email
