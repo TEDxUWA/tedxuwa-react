@@ -14,7 +14,7 @@ export default class NotFound extends Component {
         <div className="content-container text-center">
           <h1 className="display-2 text-primary">404</h1>
           <h3 className="font-weight-bold">Entering the unknown</h3>
-          <p>Hmmm, looks like you have found a page that doesn't exist!</p>
+          <p>Hmmm, the page you&apos;re looking for does not exist!</p>
           <Link to="/events">
             <button className="btn btn-link text-primary px-0">
               View our events&nbsp;&nbsp;
