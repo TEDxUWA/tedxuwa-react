@@ -22,6 +22,7 @@ class App extends Component {
             <Route path="/events" component={ASYNC.EventsPage} />
             <Route exact path="/about" component={ASYNC.AboutPage} />
             <Route exact path="/" component={ASYNC.LandingPage} />
+            <Route path="*" component={ASYNC.NotFound} />
           </Switch>
           <Route path="/" component={Footer} />
         </div>

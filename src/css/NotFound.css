@@ -1,0 +1,53 @@
+.not-found.page .shape-container {
+  position: relative;
+}
+.not-found.page .circle {
+  width: 256px;
+  height: 256px;
+  border-radius: 100%;
+  position: absolute;
+  right: -70px;
+  top: -120px;
+}
+.not-found.page .square {
+  width: 128px;
+  height: 128px;
+  transform: rotate(-30deg);
+  position: absolute;
+  top: 120px;
+  left: -30px;
+}
+.not-found.page .triangle {
+  width: 0;
+  height: 0;
+  border-left: 110px solid transparent;
+  border-right: 110px solid transparent;
+  border-bottom: 200px solid var(--color-primary);
+  transform: rotate(-100deg);
+  position: absolute;
+  top: -220px;
+  right: 50%;
+}
+.not-found.page .content-container {
+  margin: 160px 0 128px 0;
+}
+@media screen and (max-width: 767px) {
+  .not-found.page .square {
+    width: 80px;
+    height: 80px;
+    top: 180px;
+    left: -70px;
+  }
+  .not-found.page .circle {
+    width: 128px;
+    height: 128px;
+    top: -100px;
+    right: -80px;
+  }
+  .not-found.page .triangle {
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid var(--color-primary);
+    top: -160px;
+  }
+}

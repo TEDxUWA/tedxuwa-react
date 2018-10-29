@@ -25,7 +25,7 @@ class EventList extends Component {
         });
       })
       .catch(err => {
-        alert(`Something went wrong: ${err.message}`);
+        console.error(`Something went wrong: ${err.message}`);
       });
   }
   sortEvents = events => {

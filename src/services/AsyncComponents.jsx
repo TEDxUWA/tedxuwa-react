@@ -23,5 +23,9 @@ export default {
   LandingPage: Loadable({
     loader: () => import('../pages/LandingPage'),
     loading
+  }),
+  NotFound: Loadable({
+    loader: () => import('../pages/NotFound'),
+    loading
   })
 };
