@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Reach = () => {
   return (
@@ -8,7 +8,7 @@ const Reach = () => {
         <div className="row mt-0 mt-md-4">
           <div className="col-md-4 mt-4 mt-md-0">
             <strong className="display-4 font-weight-bold text-primary">
-              2.7k
+              3k
             </strong>
             <p>
               <strong>Followers</strong>

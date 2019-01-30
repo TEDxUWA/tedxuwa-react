@@ -1,31 +1,31 @@
-import React, { Component } from 'react';
-import landing_illustration from '../assets/landing_illustration.png';
-import { Link } from 'react-router-dom';
-import speaker_icon from '../assets/speaker.png';
-import { SPEAKER_REGISTRATION_LINK } from '../services/Globals';
-import API from '../services/Api';
-import dayjs from 'dayjs';
-import slugify from 'slugify';
-import '../css/LandingPage.css';
-import { slugConfig } from '../global/constants';
+import React, { Component } from "react";
+import landing_illustration from "../assets/landing_illustration.png";
+import { Link } from "react-router-dom";
+import speaker_icon from "../assets/speaker.png";
+import { SPEAKER_REGISTRATION_LINK } from "../services/Globals";
+import API from "../services/Api";
+import dayjs from "dayjs";
+import slugify from "slugify";
+import "../css/LandingPage.css";
+import { slugConfig } from "../global/constants";
 
 class Opening extends Component {
   state = {
     featuredEvent: {}
   };
   componentDidMount() {
-    API.GET('events/?featured').then(data => {
+    API.GET("events/?featured").then(data => {
       this.setState({ featuredEvent: data });
     });
   }
   render() {
     const featured = this.state.featuredEvent;
     const date = featured.start
-      ? dayjs(featured.start).format('dddd, D MMMM YYYY')
-      : '';
+      ? dayjs(featured.start).format("dddd, D MMMM YYYY")
+      : "";
     const ticketPath = featured.name
-      ? `${featured.id}/${slugify(featured.name || '', slugConfig)}`
-      : '';
+      ? `${featured.id}/${slugify(featured.name || "", slugConfig)}`
+      : "";
     return (
       <div className="landing opening">
         <img src={landing_illustration} alt="TEDxUWA" className="bg-image" />
@@ -63,10 +63,9 @@ function Speaker() {
             <h2>Want to speak at an event?</h2>
             <h4>
               Do you have an idea worth spreading? A talent you want to share
-              with the world? Applications for 2018 speakers are now closed but
-              keep an eye our for TEDxUWA 2019 speaker applications!
+              with the world? Contact us with your idea!
             </h4>
-            {/* <a
+            <a
               href={SPEAKER_REGISTRATION_LINK}
               rel="noreferrer noopener"
               target="_blank"
@@ -74,7 +73,7 @@ function Speaker() {
               className="btn btn-light"
             >
               Learn more
-            </a> */}
+            </a>
           </div>
           <div className="col-md-5 d-none d-sm-block">
             <img src={speaker_icon} alt="Want speak at an event?" />
