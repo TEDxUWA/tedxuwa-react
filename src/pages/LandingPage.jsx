@@ -29,22 +29,27 @@ class Opening extends Component {
     return (
       <div className="landing opening">
         <img src={landing_illustration} alt="TEDxUWA" className="bg-image" />
+        <div className="bg-image-overlay" />
         <div className="container">
           <div className="hero-container">
             <h1 className="hero-text">
               <span className="text-primary">Ideas</span>
               <br />
-              Worth Spreading
+              <span className="text-white">Worth Spreading</span>
             </h1>
-            <p className="hero-subtext">
-              {featured.name}
-              <br /> {date}
-            </p>
-            <Link to={`/events/${ticketPath}`}>
-              <button className="btn btn-primary text-uppercase">
-                buy tickets
-              </button>
-            </Link>
+            {!!featured.name ? (
+              <div>
+                <p className="hero-subtext text-white">
+                  {featured.name}
+                  <br /> {date}
+                </p>
+                <Link to={`/events/${ticketPath}`}>
+                  <button className="btn btn-primary text-uppercase">
+                    buy tickets
+                  </button>
+                </Link>
+              </div>
+            ) : null}
           </div>
         </div>
       </div>
