@@ -1,32 +1,33 @@
-import React, { Component } from 'react';
-import PageHeader from '../components/PageHeader';
-import ContactForm from '../components/ContactForm';
-import Reach from '../components/Reach';
-import banner from '../assets/slogan.jpg';
-import '../css/SponsorsPage.css';
+import React, { Component } from "react";
+import PageHeader from "../components/PageHeader";
+import ContactForm from "../components/ContactForm";
+import Reach from "../components/Reach";
+import banner from "../assets/slogan.jpg";
+import "../css/SponsorsPage.css";
 
-import ey from '../assets/sponsors/ey.png';
-import uwa from '../assets/sponsors/uwa.png';
-import chobani from '../assets/sponsors/chobani.png';
-import thegoodgrocer from '../assets/sponsors/thegoodgrocer.png';
-import officeworks from '../assets/sponsors/officeworks.png';
-import biopak from '../assets/sponsors/biopak.png';
+import prospectus from "../assets/TEDxUWA Sponsorship Prospectus.pdf";
+import ey from "../assets/sponsors/ey.png";
+import uwa from "../assets/sponsors/uwa.png";
+import chobani from "../assets/sponsors/chobani.png";
+import thegoodgrocer from "../assets/sponsors/thegoodgrocer.png";
+import officeworks from "../assets/sponsors/officeworks.png";
+import biopak from "../assets/sponsors/biopak.png";
 
 const SPONSORS = {
   gold: [
     {
       logo: ey,
-      name: 'EY'
+      name: "EY"
     },
     {
       logo: uwa,
-      name: 'UWA Graduate Research School'
+      name: "UWA Graduate Research School"
     }
   ],
   silver: [
     {
       logo:
-        'https://res-1.cloudinary.com/scentre-group-au/image/fetch/c_pad,f_auto,q_auto/http://res.cloudinary.com/scentre-group-au/image/upload/x8fbv0aqh7muqyja0a9o.png',
+        "https://res-1.cloudinary.com/scentre-group-au/image/fetch/c_pad,f_auto,q_auto/http://res.cloudinary.com/scentre-group-au/image/upload/x8fbv0aqh7muqyja0a9o.png",
       name: `Utopia`
     },
     {
@@ -41,12 +42,12 @@ const SPONSORS = {
   bronze: [
     {
       logo: chobani,
-      name: 'Chobani'
+      name: "Chobani"
     },
     {
       logo: thegoodgrocer,
-      name: 'The Good Grocer'
-    },
+      name: "The Good Grocer"
+    }
   ]
 };
 
@@ -55,7 +56,7 @@ export default class SponsorsPage extends Component {
     sponsorsExpanded: false
   };
   componentDidMount() {
-    document.title = 'TEDxUWA | Work with us';
+    document.title = "TEDxUWA | Work with us";
   }
   expand = () => this.setState({ sponsorsExpanded: true });
   render() {
@@ -158,6 +159,11 @@ export default class SponsorsPage extends Component {
                   marketing, signage, production or merchendise any assistance
                   would be greatly appreciated.
                 </p>
+                <a href={prospectus} download>
+                  <button className="btn btn-dark mt-3">
+                    Download our prospectus
+                  </button>
+                </a>
               </div>
               <div className="col-md-6">
                 <ContactForm noTitle />
