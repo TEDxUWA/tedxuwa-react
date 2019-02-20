@@ -159,7 +159,7 @@ export default class SponsorsPage extends Component {
                   marketing, signage, production or merchendise any assistance
                   would be greatly appreciated.
                 </p>
-                <a href={prospectus} download>
+                <a href={prospectus} target="_blank" rel="noopener noreferrer">
                   <button className="btn btn-dark mt-3">
                     Download our prospectus
                   </button>
