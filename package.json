@@ -11,7 +11,7 @@
     "react-markdown": "^3.3.0",
     "react-media": "^1.8.0",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.1",
+    "react-scripts": "^2.1.8",
     "slugify": "^1.2.9"
   },
   "scripts": {
@@ -19,5 +19,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
