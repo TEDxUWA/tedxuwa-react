@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
-import PageHeader from '../../components/PageHeader';
-import EventCard from '../../components/EventCard';
-import Media from 'react-media';
-import banner from '../../assets/stage.jpg';
-import API from '../../services/Api';
-import dayjs from 'dayjs';
-import '../../css/EventsPage.css';
+import React, { Component } from "react";
+import PageHeader from "../../components/PageHeader";
+import EventCard from "../../components/EventCard";
+import Media from "react-media";
+import banner from "../../assets/stage.jpg";
+import API from "../../services/Api";
+import dayjs from "dayjs";
+import ExploreTalksSection from "../../components/ExploreTalksSection";
+import "../../css/EventsPage.css";
 
 class EventList extends Component {
   state = {
@@ -15,8 +16,8 @@ class EventList extends Component {
   };
   showAllPast = () => this.setState({ pastLimit: this.state.past.length });
   componentDidMount() {
-    document.title = 'TEDxUWA | Events';
-    API.GET('events')
+    document.title = "TEDxUWA | Events";
+    API.GET("events")
       .then(data => {
         let events = this.sortEvents(data.results);
         this.setState({
@@ -43,7 +44,7 @@ class EventList extends Component {
     return { upcoming, past };
   };
   render() {
-    const root = '/events';
+    const root = "/events";
     const lead =
       "The TEDxUWA movement aims to be actively involved within the campus culture of the UWA community and help foster ideas throughout the year. Check out this year's events below, or view highlights from previous years.";
     return (
@@ -64,7 +65,7 @@ class EventList extends Component {
                     {this.state.upcoming.map(event => (
                       <div
                         className={`col-12 col-sm-6 col-md-4 ${
-                          match ? 'p-0' : 'pb-3'
+                          match ? "p-0" : "pb-3"
                         }`}
                         key={event.id}
                       >
@@ -75,7 +76,7 @@ class EventList extends Component {
                 </div>
               </div>
             ) : null}
-            <hr />
+            <ExploreTalksSection />
             <div className="container py-4">
               <h3 className="font-weight-bold mb-4">Past events</h3>
               <div className="container px-0">
@@ -83,7 +84,7 @@ class EventList extends Component {
                   {this.state.past.slice(0, this.state.pastLimit).map(event => (
                     <div
                       className={`col-12 col-sm-6 col-md-4 ${
-                        match ? 'p-0' : 'pb-3'
+                        match ? "p-0" : "pb-3"
                       }`}
                       key={event.id}
                     >
