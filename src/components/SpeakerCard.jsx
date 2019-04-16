@@ -19,9 +19,20 @@ export default class SpeakerCard extends Component {
           <p className="text-light mt-2">{tag_line}</p>
         </div>
       </div>,
-      <Modal key="modal" isOpen={showModal} onRequestClose={this.toggleModal}>
+      <Modal
+        key="modal"
+        isOpen={showModal}
+        onRequestClose={this.toggleModal}
+        style={{
+          background: "transparent",
+          top: 120,
+          border: "none",
+          width: "50%",
+          margin: "auto"
+        }}
+      >
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header d-flex justify-content-end">
             <button
               type="button"
               class="close"
@@ -32,8 +43,8 @@ export default class SpeakerCard extends Component {
             </button>
           </div>
           <div class="modal-body">
-            <h5>{name}</h5>
-            <p className="lead">{tag_line}</p>
+            <h3 className="font-weight-bold mb-1">{name}</h3>
+            <p className="lead mb-3">{tag_line}</p>
             <p>{bio}</p>
           </div>
         </div>
