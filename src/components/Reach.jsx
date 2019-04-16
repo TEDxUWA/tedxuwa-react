@@ -2,8 +2,8 @@ import React from "react";
 
 const Reach = () => {
   return (
-    <div className="pt-4 bg-white">
-      <div className="container pb-4">
+    <div className="pt-5 bg-white">
+      <div className="container pb-5">
         <h4 className="font-weight-bold">Our Audience</h4>
         <div className="row mt-0 mt-md-4">
           <div className="col-md-4 mt-4 mt-md-0">

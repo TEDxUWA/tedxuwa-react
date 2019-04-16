@@ -1,65 +1,35 @@
 import React, { Component } from "react";
 import PageHeader from "../components/PageHeader";
 import ContactForm from "../components/ContactForm";
+import SponsorCard from "../components/SponsorCard";
 import Reach from "../components/Reach";
 import banner from "../assets/slogan.jpg";
-import "../css/SponsorsPage.css";
-
+import API from "../services/Api";
 import prospectus from "../assets/TEDxUWA Sponsorship Prospectus.pdf";
-import ey from "../assets/sponsors/ey.png";
-import uwa from "../assets/sponsors/uwa.png";
-import chobani from "../assets/sponsors/chobani.png";
-import thegoodgrocer from "../assets/sponsors/thegoodgrocer.png";
-import officeworks from "../assets/sponsors/officeworks.png";
-import biopak from "../assets/sponsors/biopak.png";
-
-const SPONSORS = {
-  gold: [
-    {
-      logo: ey,
-      name: "EY"
-    },
-    {
-      logo: uwa,
-      name: "UWA Graduate Research School"
-    }
-  ],
-  silver: [
-    {
-      logo:
-        "https://res-1.cloudinary.com/scentre-group-au/image/fetch/c_pad,f_auto,q_auto/http://res.cloudinary.com/scentre-group-au/image/upload/x8fbv0aqh7muqyja0a9o.png",
-      name: `Utopia`
-    },
-    {
-      logo: officeworks,
-      name: `Officeworks`
-    },
-    {
-      logo: biopak,
-      name: `BioPak`
-    }
-  ],
-  bronze: [
-    {
-      logo: chobani,
-      name: "Chobani"
-    },
-    {
-      logo: thegoodgrocer,
-      name: "The Good Grocer"
-    }
-  ]
-};
+import "../css/SponsorsPage.css";
 
 export default class SponsorsPage extends Component {
   state = {
-    sponsorsExpanded: false
+    sponsorsExpanded: false,
+    sponsors: []
   };
   componentDidMount() {
     document.title = "TEDxUWA | Work with us";
+    this.fetchSponsors();
   }
+  fetchSponsors = () => {
+    API.GET("sponsors")
+      .then(data => {
+        const sponsors = data.results;
+        this.setState({ sponsors });
+      })
+      .catch(err => {
+        console.error(`Something went wrong: ${err.message}`);
+      });
+  };
   expand = () => this.setState({ sponsorsExpanded: true });
   render() {
+    const { sponsors } = this.state;
     return (
       <div className="sponsors page">
         <PageHeader title="Work With Us" image={banner} />
@@ -85,63 +55,9 @@ export default class SponsorsPage extends Component {
         <div className="container py-4">
           <h3 className="font-weight-bold mb-4 text-center">Our sponsors</h3>
           <div className="gold-group row text-center d-flex justify-content-center mb-3">
-            {SPONSORS.gold.map(sponsor => (
-              <div
-                className="col-sm-6 col-md-4 card border-0"
-                key={sponsor.name}
-              >
-                <img
-                  src={sponsor.logo}
-                  alt={sponsor.name}
-                  className="card-img-top p-1"
-                />
-                <div className="card-body p-1 pt-3">
-                  <h3 className="card-title h4 font-weight-bold">
-                    {sponsor.name}
-                  </h3>
-                </div>
-              </div>
+            {sponsors.map(sponsor => (
+              <SponsorCard sponsor={sponsor} key={sponsor.name} />
             ))}
-          </div>
-          <div>
-            <div className="silver-group row text-center d-flex justify-content-center mb-3">
-              {SPONSORS.silver.map(sponsor => (
-                <div
-                  className="col-sm-6 col-md-4 card border-0"
-                  key={sponsor.name}
-                >
-                  <img
-                    src={sponsor.logo}
-                    alt={sponsor.name}
-                    className="card-img-top p-3"
-                  />
-                  <div className="card-body p-1 pt-3">
-                    <h3 className="card-title h4 font-weight-bold">
-                      {sponsor.name}
-                    </h3>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="bronze-group row text-center d-flex justify-content-center mb-3">
-              {SPONSORS.bronze.map(sponsor => (
-                <div
-                  className="col-sm-6 col-md-4 card border-0"
-                  key={sponsor.name}
-                >
-                  <img
-                    src={sponsor.logo}
-                    alt={sponsor.name}
-                    className="card-img-top p-3"
-                  />
-                  <div className="card-body p-1 pt-3">
-                    <h3 className="card-title h4 font-weight-bold">
-                      {sponsor.name}
-                    </h3>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
         <hr />
