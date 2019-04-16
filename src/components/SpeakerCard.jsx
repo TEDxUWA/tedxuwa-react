@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Modal from "react-modal";
 import "../css/SpeakerCard.css";
 
 export default class SpeakerCard extends Component {
@@ -18,32 +19,25 @@ export default class SpeakerCard extends Component {
           <p className="text-light mt-2">{tag_line}</p>
         </div>
       </div>,
-      <div
-        class={`modal fade ${showModal ? "show" : ""}`}
-        tabIndex="-1"
-        role="dialog"
-        key="modal"
-      >
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="close"
-                aria-label="Close"
-                onClick={this.toggleModal}
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <h5>{name}</h5>
-              <p className="lead">{tag_line}</p>
-              <p>{bio}</p>
-            </div>
+      <Modal key="modal" isOpen={showModal} onRequestClose={this.toggleModal}>
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="close"
+              aria-label="Close"
+              onClick={this.toggleModal}
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h5>{name}</h5>
+            <p className="lead">{tag_line}</p>
+            <p>{bio}</p>
           </div>
         </div>
-      </div>
+      </Modal>
     ];
   }
 }
