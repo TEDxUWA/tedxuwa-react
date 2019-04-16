@@ -32,7 +32,7 @@ export default class SponsorsPage extends Component {
       sponsors.reduce((groups, sponsor) => {
         const { tier } = sponsor;
         if (groups[tier]) groups[tier].push(sponsor);
-        groups[tier] = [sponsor];
+        else groups[tier] = [sponsor];
         return groups;
       }, {})
     );
