@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import landing_illustration from "../assets/landing_illustration.png";
+import landing_illustration from "../assets/landing_illustration.jpg";
 import { Link } from "react-router-dom";
 import speaker_icon from "../assets/speaker.png";
 import { SPEAKER_REGISTRATION_LINK } from "../services/Globals";
