@@ -24,8 +24,8 @@ export default ({ sponsor }) => {
         className={`card-img-top p-${padding}`}
       />
       <div className="card-body p-1 pt-3">
-        <h3 className={`card-title h${heading} font-weight-bold`}>{name}</h3>
-        {showDesc && description && <p>{description}</p>}
+        <h3 className={`h${heading} font-weight-bold`}>{name}</h3>
+        {showDesc && description && <p className="mb2-2">{description}</p>}
         {showLink && link && (
           <a target="_blank" rel="noopener noreferrer" href={link}>
             Visit website
