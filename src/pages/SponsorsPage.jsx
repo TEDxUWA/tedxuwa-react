@@ -20,13 +20,22 @@ export default class SponsorsPage extends Component {
   fetchSponsors = () => {
     API.GET("sponsors")
       .then(data => {
-        const sponsors = data.results;
+        const sponsors = this.groupSponsors(data.results);
         this.setState({ sponsors });
       })
       .catch(err => {
         console.error(`Something went wrong: ${err.message}`);
       });
   };
+  groupSponsors = sponsors =>
+    Object.values(
+      sponsors.reduce((groups, sponsor) => {
+        const { tier } = sponsor;
+        if (groups[tier]) groups[tier].push(sponsor);
+        groups[tier] = [sponsor];
+        return groups;
+      }, {})
+    );
   expand = () => this.setState({ sponsorsExpanded: true });
   render() {
     const { sponsors } = this.state;
@@ -54,11 +63,13 @@ export default class SponsorsPage extends Component {
         </div>
         <div className="container py-4">
           <h3 className="font-weight-bold mb-4 text-center">Our sponsors</h3>
-          <div className="gold-group row text-center d-flex justify-content-center mb-3">
-            {sponsors.map(sponsor => (
-              <SponsorCard sponsor={sponsor} key={sponsor.name} />
-            ))}
-          </div>
+          {sponsors.map(group => (
+            <div className="gold-group row text-center d-flex justify-content-center mb-3">
+              {group.map(sponsor => (
+                <SponsorCard sponsor={sponsor} key={sponsor.name} />
+              ))}
+            </div>
+          ))}
         </div>
         <hr />
         <Reach />
