@@ -24,12 +24,16 @@ export default class SpeakerCard extends Component {
         isOpen={showModal}
         onRequestClose={this.toggleModal}
         style={{
-          background: "transparent",
-          top: 120,
-          border: "none",
-          width: "50%",
-          margin: "auto"
+          overlay: { backgroundColor: "rgba(0, 0, 0, 0.75)" },
+          content: {
+            background: "transparent",
+            top: 120,
+            border: "none",
+            width: "50%",
+            margin: "auto"
+          }
         }}
+        closeTimeoutMS={250}
       >
         <div class="modal-content">
           <div class="modal-header d-flex justify-content-end">
