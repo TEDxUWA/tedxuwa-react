@@ -12,15 +12,7 @@
   object-fit: contain;
 }
 
-.ReactModal__Overlay {
-  opacity: 0;
-  transition: opacity 25ms ease-in-out;
-}
-
-.ReactModal__Overlay--after-open {
-  opacity: 1;
-}
-
-.ReactModal__Overlay--before-close {
-  opacity: 0;
+.speaker-card-modal img.photo {
+  max-width: 300px;
+  max-height: 300px;
 }

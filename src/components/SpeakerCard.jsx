@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Modal from "react-modal";
+import { Modal, ModalHeader, ModalBody } from "reactstrap";
 import "../css/SpeakerCard.css";
 
 export default class SpeakerCard extends Component {
@@ -15,43 +15,22 @@ export default class SpeakerCard extends Component {
       <div className="speaker-card media" onClick={this.toggleModal} key="card">
         <img className="mr-3" src={profile_image} alt={name} />
         <div className="media-body">
-          <h5 className="mt-0 font-weight-bold text-white">{name}</h5>
+          <h2 className="mt-0 font-weight-bold text-white">{name}</h2>
           <p className="text-light mt-2">{tag_line}</p>
         </div>
       </div>,
       <Modal
         key="modal"
+        className="speaker-card-modal"
         isOpen={showModal}
-        onRequestClose={this.toggleModal}
-        style={{
-          overlay: { backgroundColor: "rgba(0, 0, 0, 0.75)" },
-          content: {
-            background: "transparent",
-            top: 120,
-            border: "none",
-            width: "50%",
-            margin: "auto"
-          }
-        }}
-        closeTimeoutMS={250}
+        toggle={this.toggleModal}
+        centered={true}
       >
-        <div class="modal-content">
-          <div class="modal-header d-flex justify-content-end">
-            <button
-              type="button"
-              class="close"
-              aria-label="Close"
-              onClick={this.toggleModal}
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <h3 className="font-weight-bold mb-1">{name}</h3>
-            <p className="lead mb-3">{tag_line}</p>
-            <p>{bio}</p>
-          </div>
-        </div>
+        <ModalHeader toggle={this.toggleModal}>{name}</ModalHeader>
+        <ModalBody>
+          {tag_line && <p className="mb-3">{tag_line}</p>}
+          {bio && <p>{bio}</p>}
+        </ModalBody>
       </Modal>
     ];
   }
