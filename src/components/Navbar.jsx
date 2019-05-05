@@ -1,34 +1,33 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import logo_dark from '../assets/logo_dark-no_padding.svg';
-import { SPEAKER_REGISTRATION_LINK } from '../services/Globals';
-import slugify from 'slugify';
-import API from '../services/Api';
-import '../css/Navbar.css';
-import { slugConfig } from '../global/constants';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import logo_dark from "../assets/logo_dark-no_padding.svg";
+import slugify from "slugify";
+import API from "../services/Api";
+import "../css/Navbar.css";
+import { slugConfig } from "../global/constants";
 
 class Navbar extends Component {
   state = {
     showNav: false,
     links: [
-      { to: '/about', text: 'about' },
-      { to: '/events', text: 'events' },
+      { to: "/about", text: "about" },
+      { to: "/events", text: "events" },
       {
-        to: '/sponsors',
-        text: 'get involved',
+        to: "/sponsors",
+        text: "get involved",
         subLinks: [
-          { to: '/sponsors', text: 'Partners' },
-          { to: SPEAKER_REGISTRATION_LINK, absolute: true, text: 'Speakers' },
-          { to: '/contact', text: 'Volunteers' }
+          { to: "/sponsors", text: "Partners" },
+          { to: "/speakers", text: "Speakers" },
+          { to: "/contact", text: "Volunteers" }
         ]
       },
-      { to: '/contact', text: 'contact' }
+      { to: "/contact", text: "contact" }
     ],
     hovering: [],
     featuredEvent: {}
   };
   componentDidMount = () => {
-    API.GET('events').then(data => {
+    API.GET("events").then(data => {
       const featuredEvent = data.results.find(e => e.featured) || {};
       this.setState({ featuredEvent });
     });
@@ -46,8 +45,8 @@ class Navbar extends Component {
     const currentPath = this.props.location.pathname;
     const featured = this.state.featuredEvent;
     const ticketPath = featured.name
-      ? `${featured.id}/${slugify(featured.name || '', slugConfig)}`
-      : '';
+      ? `${featured.id}/${slugify(featured.name || "", slugConfig)}`
+      : "";
     return (
       <div>
         <nav className="navbar fixed-top text-uppercase px-0 py-2">
@@ -66,7 +65,7 @@ class Navbar extends Component {
                 {this.state.links.map(link => (
                   <li
                     className={`nav-item list-inline-item ${
-                      currentPath.includes(link.to) ? 'active' : ''
+                      currentPath.includes(link.to) ? "active" : ""
                     }`}
                     key={link.to}
                     onMouseEnter={() => this.toggleNavHover(link)}
@@ -117,7 +116,7 @@ class Navbar extends Component {
                   {this.state.links.map(link => (
                     <li
                       className={`nav-item ${
-                        currentPath.includes(link.to) ? 'active' : ''
+                        currentPath.includes(link.to) ? "active" : ""
                       }`}
                       key={link.to}
                       onClick={this.toggleNav}

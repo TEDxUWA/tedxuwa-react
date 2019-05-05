@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import ScrollToTop from './components/ScrollToTop';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import ASYNC from './services/AsyncComponents';
-import './css/App.css';
+import React, { Component } from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import ASYNC from "./services/AsyncComponents";
+import "./css/App.css";
 
 class App extends Component {
   componentDidMount() {
-    document.querySelector('.loading-placeholder').style.display = 'none';
+    document.querySelector(".loading-placeholder").style.display = "none";
   }
   render() {
     return (
@@ -21,6 +21,7 @@ class App extends Component {
             <Route exact path="/contact" component={ASYNC.ContactPage} />
             <Route path="/events" component={ASYNC.EventsPage} />
             <Route exact path="/about" component={ASYNC.AboutPage} />
+            <Route exact path="/speakers" component={ASYNC.SpeakersPage} />
             <Route exact path="/" component={ASYNC.LandingPage} />
             <Route path="*" component={ASYNC.NotFound} />
           </Switch>

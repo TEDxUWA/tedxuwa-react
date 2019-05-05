@@ -44,7 +44,7 @@ class Footer extends Component {
                   <Link to="/events">Attend an event</Link>
                 </li>
                 <li>
-                  <Link to="/speaker">Speakers</Link>
+                  <Link to="/speakers">Speakers</Link>
                 </li>
               </ul>
             </div>
@@ -71,9 +71,9 @@ class Footer extends Component {
               </ul>
             </div>
           </div>
-          <p className="footnote text-muted">
+          <small className="d-inline-block mt-3 text-muted">
             This independent TEDx event is operated under license from TED.
-          </p>
+          </small>
         </div>
       </footer>
     );

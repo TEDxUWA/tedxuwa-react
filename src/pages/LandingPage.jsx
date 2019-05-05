@@ -65,11 +65,11 @@ function Speaker() {
             <img src={speaker_icon} alt="Want speak at an event?" />
           </div>
           <div className="col-md-7">
-            <h2>Want to speak at an event?</h2>
-            <h4>
+            <h2 className="mb-2">Have an idea worth spreading?</h2>
+            <p className="lead mb-3">
               Do you have an idea worth spreading? A talent you want to share
               with the world? Contact us with your idea!
-            </h4>
+            </p>
             <a
               href={SPEAKER_REGISTRATION_LINK}
               rel="noreferrer noopener"

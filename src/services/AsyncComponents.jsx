@@ -1,5 +1,5 @@
-import React from 'react';
-import Loadable from 'react-loadable';
+import React from "react";
+import Loadable from "react-loadable";
 
 const loading = () => (
   <div className="loading-placeholder">
@@ -10,22 +10,26 @@ const loading = () => (
 );
 
 export default {
-  AboutPage: Loadable({ loader: () => import('../pages/AboutPage'), loading }),
-  EventsPage: Loadable({ loader: () => import('../pages/events'), loading }),
+  AboutPage: Loadable({ loader: () => import("../pages/AboutPage"), loading }),
+  EventsPage: Loadable({ loader: () => import("../pages/events"), loading }),
   ContactPage: Loadable({
-    loader: () => import('../pages/ContactPage'),
+    loader: () => import("../pages/ContactPage"),
     loading
   }),
   SponsorsPage: Loadable({
-    loader: () => import('../pages/SponsorsPage'),
+    loader: () => import("../pages/SponsorsPage"),
+    loading
+  }),
+  SpeakersPage: Loadable({
+    loader: () => import("../pages/speakers"),
     loading
   }),
   LandingPage: Loadable({
-    loader: () => import('../pages/LandingPage'),
+    loader: () => import("../pages/LandingPage"),
     loading
   }),
   NotFound: Loadable({
-    loader: () => import('../pages/NotFound'),
+    loader: () => import("../pages/NotFound"),
     loading
   })
 };
