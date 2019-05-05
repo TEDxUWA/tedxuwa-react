@@ -26,7 +26,7 @@ class ContactPage extends Component {
             <div className="people-group col-12 py-4">
               <div className="row">
                 {CONTACTS.map(contact => (
-                  <div className="col-sm-6 col-md-4 mb-2">
+                  <div className="col-sm-6 col-md-4 mb-2" key={contact.email}>
                     <a
                       href={`mailto:${contact.email}`}
                       className="link-unset"
