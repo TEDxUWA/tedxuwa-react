@@ -1,44 +1,44 @@
-import React, { Component } from "react";
-import PageHeader from "../components/PageHeader";
-import ContactForm from "../components/ContactForm";
-import SponsorCard from "../components/SponsorCard";
-import Reach from "../components/Reach";
-import banner from "../assets/slogan.jpg";
-import API from "../services/Api";
-import prospectus from "../assets/TEDxUWA Sponsorship Prospectus.pdf";
-import "../css/SponsorsPage.css";
+import React, { Component } from 'react'
+import PageHeader from '../components/PageHeader'
+import ContactForm from '../components/ContactForm'
+import SponsorCard from '../components/SponsorCard'
+import Reach from '../components/Reach'
+import banner from '../assets/slogan.jpg'
+import API from '../services/Api'
+import prospectus from '../assets/TEDxUWA Sponsorship Prospectus.pdf'
+import '../css/SponsorsPage.css'
 
 export default class SponsorsPage extends Component {
   state = {
     sponsorsExpanded: false,
     sponsors: []
-  };
+  }
   componentDidMount() {
-    document.title = "TEDxUWA | Work with us";
-    this.fetchSponsors();
+    document.title = 'TEDxUWA | Work with us'
+    this.fetchSponsors()
   }
   fetchSponsors = () => {
-    API.GET("sponsors")
+    API.GET('sponsors')
       .then(data => {
-        const sponsors = this.groupSponsors(data.results);
-        this.setState({ sponsors });
+        const sponsors = this.groupSponsors(data.results)
+        this.setState({ sponsors })
       })
       .catch(err => {
-        console.error(`Something went wrong: ${err.message}`);
-      });
-  };
+        console.error(`Something went wrong: ${err.message}`)
+      })
+  }
   groupSponsors = sponsors =>
     Object.values(
       sponsors.reduce((groups, sponsor) => {
-        const { tier } = sponsor;
-        if (groups[tier]) groups[tier].push(sponsor);
-        else groups[tier] = [sponsor];
-        return groups;
+        const { tier } = sponsor
+        if (groups[tier]) groups[tier].push(sponsor)
+        else groups[tier] = [sponsor]
+        return groups
       }, {})
-    );
-  expand = () => this.setState({ sponsorsExpanded: true });
+    )
+  expand = () => this.setState({ sponsorsExpanded: true })
   render() {
-    const { sponsors } = this.state;
+    const { sponsors } = this.state
     return (
       <div className="sponsors page">
         <PageHeader title="Work With Us" image={banner} />
@@ -61,12 +61,16 @@ export default class SponsorsPage extends Component {
             </div>
           </div>
         </div>
-        <div className="container py-4">
-          <h3 className="font-weight-bold mb-4 text-center">Our sponsors</h3>
+        <div className="container py-5">
+          <h3 className="font-weight-bold mb-4 text-center">Our partners</h3>
           {sponsors.map(group => (
             <div className="gold-group row text-center d-flex justify-content-center mb-3">
               {group.map(sponsor => (
-                <SponsorCard sponsor={sponsor} key={sponsor.name} />
+                <div
+                  className="col-sm-6 col-md-4 mb-3 card border-0 text-center"
+                  key={sponsor.name}>
+                  <SponsorCard sponsor={sponsor} />
+                </div>
               ))}
             </div>
           ))}
@@ -99,6 +103,6 @@ export default class SponsorsPage extends Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
