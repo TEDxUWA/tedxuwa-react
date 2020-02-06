@@ -1,52 +1,53 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import logo_dark from "../assets/logo_dark-no_padding.svg";
-import slugify from "slugify";
-import API from "../services/Api";
-import "../css/Navbar.css";
-import { slugConfig } from "../global/constants";
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import logo_dark from '../assets/logo_dark-no_padding.svg'
+import slugify from 'slugify'
+import API from '../services/Api'
+import '../css/Navbar.css'
+import { slugConfig, YOUTUBE_PLAYLIST_URL } from '../global/constants'
 
 class Navbar extends Component {
   state = {
     showNav: false,
     links: [
-      { to: "/about", text: "about" },
-      { to: "/events", text: "events" },
+      { to: '/about', text: 'about' },
+      { to: '/events', text: 'events' },
       {
-        to: "/sponsors",
-        text: "get involved",
+        to: '/sponsors',
+        text: 'get involved',
         subLinks: [
-          { to: "/sponsors", text: "Partners" },
-          { to: "/speakers", text: "Speakers" },
-          { to: "/contact", text: "Volunteers" }
+          { to: '/sponsors', text: 'Partners' },
+          { to: '/speakers', text: 'Speakers' },
+          { to: '/contact', text: 'Volunteers' }
         ]
       },
-      { to: "/contact", text: "contact" }
+      { to: '/contact', text: 'contact' },
+      { to: YOUTUBE_PLAYLIST_URL, text: 'Watch' }
     ],
     hovering: [],
     featuredEvent: {}
-  };
+  }
   componentDidMount = () => {
-    API.GET("events").then(data => {
-      const featuredEvent = data.results.find(e => e.featured) || {};
-      this.setState({ featuredEvent });
-    });
-  };
-  toggleNav = () => this.setState({ showNav: !this.state.showNav });
+    API.GET('events').then(data => {
+      const featuredEvent = data.results.find(e => e.featured) || {}
+      this.setState({ featuredEvent })
+    })
+  }
+  toggleNav = () => this.setState({ showNav: !this.state.showNav })
   toggleNavHover = link =>
     this.setState(oldState => {
-      let hovering = Array.from(oldState.hovering);
+      let hovering = Array.from(oldState.hovering)
       hovering.includes(link.to)
         ? hovering.splice(hovering.indexOf(link.to), 1)
-        : hovering.push(link.to);
-      return Object.assign({}, oldState, { hovering });
-    });
+        : hovering.push(link.to)
+      return Object.assign({}, oldState, { hovering })
+    })
   render() {
-    const currentPath = this.props.location.pathname;
-    const featured = this.state.featuredEvent;
+    const currentPath = this.props.location.pathname
+    const featured = this.state.featuredEvent
     const ticketPath = featured.name
-      ? `${featured.id}/${slugify(featured.name || "", slugConfig)}`
-      : "";
+      ? `${featured.id}/${slugify(featured.name || '', slugConfig)}`
+      : ''
     return (
       <div>
         <nav className="navbar fixed-top text-uppercase px-0 py-2">
@@ -65,20 +66,22 @@ class Navbar extends Component {
                 {this.state.links.map(link => (
                   <li
                     className={`nav-item list-inline-item ${
-                      currentPath.includes(link.to) ? "active" : ""
+                      currentPath.includes(link.to) ? 'active' : ''
                     }`}
                     key={link.to}
                     onMouseEnter={() => this.toggleNavHover(link)}
-                    onMouseLeave={() => this.toggleNavHover(link)}
-                  >
-                    <Link to={link.to}>{link.text}</Link>
+                    onMouseLeave={() => this.toggleNavHover(link)}>
+                    {link.to.includes('http') ? (
+                      <a href={link.to}>{link.text}</a>
+                    ) : (
+                      <Link to={link.to}>{link.text}</Link>
+                    )}
                     {link.subLinks && this.state.hovering.includes(link.to) ? (
                       <ul className="sub-links bg-white border-bottom p-2">
                         {link.subLinks.map(subLink => (
                           <li
                             key={subLink.to}
-                            className="py-2 px-2 border-top border-bottom d-block"
-                          >
+                            className="py-2 px-2 border-top border-bottom d-block">
                             {subLink.absolute ? (
                               <a href={subLink.to}>{subLink.text}</a>
                             ) : (
@@ -101,30 +104,26 @@ class Navbar extends Component {
             </div>
             <div
               className="col-2 d-block d-md-none px-0"
-              onClick={this.toggleNav}
-            >
+              onClick={this.toggleNav}>
               <i className="fas fa-bars fl-right" />
             </div>
           </div>
           <div
             className="xs-nav w-100 mt-2 border-top bg-white animation-fade border"
-            hidden={!this.state.showNav}
-          >
+            hidden={!this.state.showNav}>
             <div className="container">
               <div className="row">
                 <ul className="nav-flex-column list-unstyled">
                   {this.state.links.map(link => (
                     <li
                       className={`nav-item ${
-                        currentPath.includes(link.to) ? "active" : ""
+                        currentPath.includes(link.to) ? 'active' : ''
                       }`}
                       key={link.to}
-                      onClick={this.toggleNav}
-                    >
+                      onClick={this.toggleNav}>
                       <Link
                         to={link.to}
-                        className="nav-link text-dark font-weight-bold"
-                      >
+                        className="nav-link text-dark font-weight-bold">
                         {link.text}
                       </Link>
                     </li>
@@ -136,8 +135,8 @@ class Navbar extends Component {
         </nav>
         <div className="nav-placeholder" />
       </div>
-    );
+    )
   }
 }
 
-export default Navbar;
+export default Navbar
