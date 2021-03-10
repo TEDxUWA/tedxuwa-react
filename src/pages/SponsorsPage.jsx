@@ -5,7 +5,7 @@ import SponsorCard from '../components/SponsorCard'
 import Reach from '../components/Reach'
 import banner from '../assets/slogan.jpg'
 import API from '../services/Api'
-import prospectus from '../assets/TEDxUWA Sponsorship Prospectus.pdf'
+import { PROSPECTUS_LINK } from "../services/Globals";
 import '../css/SponsorsPage.css'
 
 export default class SponsorsPage extends Component {
@@ -90,7 +90,7 @@ export default class SponsorsPage extends Component {
                   marketing, signage, production or merchendise any assistance
                   would be greatly appreciated.
                 </p>
-                <a href={prospectus} target="_blank" rel="noopener noreferrer">
+                <a href={PROSPECTUS_LINK}>
                   <button className="btn btn-dark mt-3">
                     Download our prospectus
                   </button>

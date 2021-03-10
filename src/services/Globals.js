@@ -1,5 +1,7 @@
 const SPEAKER_REGISTRATION_LINK = 'https://t.tedxuwa.com/SpeakerApp';
 
+export const PROSPECTUS_LINK = 'https://t.tedxuwa.com/prospectus'
+
 export const YOUTUBE_LINK =
   'https://www.youtube.com/playlist?list=PLsRNoUx8w3rPD_QqBt6HCdC_fuxAGgWC2';
 
