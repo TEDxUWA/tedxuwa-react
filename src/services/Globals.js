@@ -1,9 +1,8 @@
-const SPEAKER_REGISTRATION_LINK = 'https://t.tedxuwa.com/SpeakerApp';
+const SPEAKER_REGISTRATION_LINK = 'https://t.tedxuwa.com/SpeakerApp'
 
 export const PROSPECTUS_LINK = 'https://t.tedxuwa.com/prospectus'
 
-export const YOUTUBE_LINK =
-  'https://www.youtube.com/playlist?list=PLsRNoUx8w3rPD_QqBt6HCdC_fuxAGgWC2';
+export const YOUTUBE_LINK = 'http://t.tedxuwa.com/recordedtalks'
 
 export const SOCIAL_MEDIA = [
   {
@@ -26,6 +25,6 @@ export const SOCIAL_MEDIA = [
     icon: 'flickr',
     link: 'https://www.flickr.com/photos/146823452@N07/',
   },
-];
+]
 
-export { SPEAKER_REGISTRATION_LINK };
+export { SPEAKER_REGISTRATION_LINK }
