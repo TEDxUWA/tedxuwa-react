@@ -1,22 +1,22 @@
-import React from 'react';
-import API from '../services/Api';
+import React from 'react'
+import API from '../services/Api'
 
 const Reach = () => {
-  const [reach, setReach] = React.useState({});
+  const [reach, setReach] = React.useState({})
 
   const fetchReach = () => {
     API.GET('reach')
       .then((data) => {
-        setReach(data);
+        setReach(data)
       })
       .catch((err) => {
-        console.error(`Something went wrong: ${err.message}`);
-      });
-  };
+        console.error(`Something went wrong: ${err.message}`)
+      })
+  }
 
   React.useEffect(() => {
-    fetchReach();
-  });
+    fetchReach()
+  }, [])
 
   return (
     <div className='pt-5 bg-white'>
@@ -34,7 +34,9 @@ const Reach = () => {
             </p>
           </div>
           <div className='col-md-4 mt-4 mt-md-0'>
-            <strong className='display-4 font-weight-bold text-primary'>{reach['speakers']}</strong>
+            <strong className='display-4 font-weight-bold text-primary'>
+              {reach['speakers']}
+            </strong>
             <p>
               <strong>Speakers</strong>
               <br />
@@ -59,7 +61,7 @@ const Reach = () => {
       </button> */}
       <hr />
     </div>
-  );
-};
+  )
+}
 
-export default Reach;
+export default Reach
