@@ -19,7 +19,6 @@ class Footer extends Component {
                 />
               </Link>
               <ul className="contact-info-group list-unstyled">
-                <li>0421 001 376</li>
                 <li>
                   <a href="mailto:hello@tedxuwa.com">hello@tedxuwa.com</a>
                 </li>
