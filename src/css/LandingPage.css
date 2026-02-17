@@ -27,14 +27,19 @@
   min-height: 480px;
   object-fit: cover;
   object-position: center;
-  z-index: 1;
   background-color: rgba(0, 0, 0, 0.4);
+}
+/* prevent the overlay */
+.landing.page .bg-image,
+.landing.page .bg-image-overlay {
+  pointer-events: none;
 }
 .landing.page .hero-container {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 2;
+  z-index: 2000; /* Higher than Bootstrap fixed-top (1030) */
+  pointer-events: auto !important;
 }
 .landing.page .hero-text {
   font-size: 50px;

@@ -46,7 +46,8 @@
     }    
   </script>
 
-  <!-- Google Tag Manager -->
+  <!-- Google Tag Manager (disabled during dev to avoid overlays) -->
+  <!--
   <script>
     (function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
@@ -57,9 +58,11 @@
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-KQK2F9F');
   </script>
+  -->
   <!-- End Google Tag Manager -->
 
-  <!-- Segment -->
+  <!-- Segment (disabled during dev to avoid overlays) -->
+  <!--
   <script>
     !function () {
       var analytics = window.analytics = window.analytics || []; if (!analytics.initialize) if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice."); else {
@@ -70,10 +73,11 @@
       }
     }();
   </script>
+  -->
   <!-- End Segment-->
 
   <title>TEDxUWA</title>
-  <!--Loading css-->
+
   <style>
     .loading-placeholder {
       width: 100vw;
@@ -121,16 +125,18 @@
 
 <body>
 
-  <!-- Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript disabled during dev) -->
+  <!--
   <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQK2F9F" height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
+  -->
   <!-- End Google Tag Manager (noscript) -->
 
   <noscript>
     You need to enable JavaScript to run this app.
   </noscript>
-  <div class="loading-placeholder">
+  <div class="loading-placeholder" style="pointer-events: none;">
     <div class="center-content">
       <div class="loader"></div>
     </div>

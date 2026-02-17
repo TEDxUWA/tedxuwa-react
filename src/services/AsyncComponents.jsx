@@ -1,13 +1,7 @@
 import React from "react";
 import Loadable from "react-loadable";
 
-const loading = () => (
-  <div className="loading-placeholder">
-    <div className="center-content">
-      <div className="loader" />
-    </div>
-  </div>
-);
+const loading = () => null;
 
 export default {
   AboutPage: Loadable({ loader: () => import("../pages/AboutPage"), loading }),

@@ -7,8 +7,62 @@ import ASYNC from "./services/AsyncComponents";
 import "./css/App.css";
 
 class App extends Component {
+  // changed the loader a bit 
   componentDidMount() {
-    document.querySelector(".loading-placeholder").style.display = "none";
+    // Aggressively remove loader
+    const removeLoader = () => {
+      const loader = document.querySelector('.loading-placeholder');
+      if (loader) {
+        loader.style.pointerEvents = 'none';
+        loader.style.display = 'none'; // Force hide
+        if (loader.parentNode) loader.parentNode.removeChild(loader);
+      }
+    };
+
+    removeLoader();
+    // Retry in case it was re-added or missed
+    setTimeout(removeLoader, 100);
+    setTimeout(removeLoader, 1000);
+    setTimeout(removeLoader, 3000);
+
+    // Active defense against rogue iframes
+    setInterval(() => {
+      // 1. Target all iframes
+      const iframes = document.querySelectorAll('iframe');
+      iframes.forEach(iframe => {
+        const style = window.getComputedStyle(iframe);
+        // Remove if it's fixed/absolute and covering a significant portion of the screen
+        if ((style.position === 'fixed' || style.position === 'absolute') && 
+            (parseInt(style.zIndex) > 10 || style.zIndex === 'auto')) {
+            
+             // Check dimensions
+             const width = iframe.offsetWidth;
+             const height = iframe.offsetHeight;
+             const windowWidth = window.innerWidth;
+             const windowHeight = window.innerHeight;
+
+             if (width > windowWidth * 0.8 && height > windowHeight * 0.8) {
+                iframe.remove();
+                console.log('Rogue iframe removed');
+             }
+        }
+      });
+      
+      // 2. Target any element with ridiculously high z-index that isn't our Navbar
+      const allElements = document.querySelectorAll('*');
+      allElements.forEach(el => {
+         const style = window.getComputedStyle(el);
+         const zIndex = parseInt(style.zIndex);
+         if (!isNaN(zIndex) && zIndex > 2000 && !el.classList.contains('navbar-wrapper-safety')) {
+             // If it's fixed and full screen
+             if (style.position === 'fixed') {
+                 el.style.display = 'none';
+                 el.style.pointerEvents = 'none';
+             }
+         }
+      });
+
+    }, 1000);
   }
   render() {
     return (

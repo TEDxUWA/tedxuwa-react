@@ -6,6 +6,7 @@ import banner from "../../assets/stage.jpg";
 import API from "../../services/Api";
 import dayjs from "dayjs";
 import ExploreTalksSection from "../../components/ExploreTalksSection";
+import Timeline from "../../components/Timeline";
 import "../../css/EventsPage.css";
 
 class EventList extends Component {
@@ -50,7 +51,7 @@ class EventList extends Component {
     return (
       <Media query="(max-width: 768px)">
         {match => (
-          <div>
+          <div className="animate-fade-in-up">
             <PageHeader
               title="Events"
               image={banner}
@@ -76,6 +77,7 @@ class EventList extends Component {
                 </div>
               </div>
             ) : null}
+            <Timeline />
             <ExploreTalksSection />
             <div className="container py-4">
               <h3 className="font-weight-bold mb-4">Past events</h3>

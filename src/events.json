@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "TEDxUWA 2026: New Horizons",
+    "date": "2026-11-20",
+    "description": "Looking forward to the next generation of ideas.",
+    "location": "UWA Octagon Theatre"
+  },
+  {
+    "id": 2,
+    "title": "TEDxUWA Salon: Future Tech",
+    "date": "2026-06-15",
+    "description": "AI, Robotics, and the future of humanity.",
+    "location": "UWA Business School"
+  },
+  {
+    "id": 3,
+    "title": "TEDxUWA 2025: Resilience",
+    "date": "2025-09-10",
+    "description": "Stories of overcoming adversity and building strength.",
+    "location": "UWA University Club"
+  },
+  {
+    "id": 4,
+    "title": "TEDxUWA Workshop: Public Speaking",
+    "date": "2024-03-12",
+    "description": "Learn the art of storytelling and public speaking.",
+    "location": "UWA Guild Village"
+  },
+  {
+    "id": 5,
+    "title": "TEDxUWA 2022: Connections",
+    "date": "2022-08-05",
+    "description": "Building bridges between diverse communities.",
+    "location": "Online Event"
+  }
+]

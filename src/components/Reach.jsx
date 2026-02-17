@@ -2,7 +2,11 @@ import React from 'react'
 import API from '../services/Api'
 
 const Reach = () => {
-  const [reach, setReach] = React.useState({})
+  const [reach, setReach] = React.useState({
+    followers: '2.5K+',
+    speakers: '50+',
+    subscribers: '1.2K+'
+  })
 
   const fetchReach = () => {
     API.GET('reach')

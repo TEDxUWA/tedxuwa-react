@@ -8,6 +8,9 @@ import dayjs from "dayjs";
 import slugify from "slugify";
 import "../css/LandingPage.css";
 import { slugConfig } from "../global/constants";
+import Reach from "../components/Reach";
+import ExploreTalksSection from "../components/ExploreTalksSection";
+import Newsletter from "../components/Newsletter";
 
 class Opening extends Component {
   state = {
@@ -32,19 +35,19 @@ class Opening extends Component {
         <div className="bg-image-overlay" />
         <div className="container">
           <div className="hero-container">
-            <h1 className="hero-text">
+            <h1 className="hero-text animate-fade-in-up">
               <span className="text-primary">Ideas</span>
               <br />
               <span className="text-white">Worth Spreading</span>
             </h1>
             {!!featured.name ? (
-              <div>
+              <div className="animate-fade-in-up delay-200">
                 <p className="hero-subtext text-white">
                   {featured.name}
                   <br /> {date}
                 </p>
                 <Link to={`/events/${ticketPath}`}>
-                  <button className="btn btn-primary text-uppercase">
+                  <button className="btn btn-primary text-uppercase hover-scale">
                     buy tickets
                   </button>
                 </Link>
@@ -91,15 +94,15 @@ function Speaker() {
 function Intro() {
   return (
     <div className="landing intro container">
-      <div className="row">
-        <div className="col-md-6">
+      <div className="row align-items-center">
+        <div className="col-md-6 animate-slide-in-left">
           <h1 className="font-weight-bold mb-3 mb-md-0">
             Technology <br />
             Entertainment <br />
             Design <br />
           </h1>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-6 animate-fade-in-up delay-300">
           <p className="lead mb-3">
             In the spirit of ideas worth spreading, TED has created a program
             called TEDx. TEDx is a program of local, self-organized events that
@@ -121,10 +124,13 @@ function Intro() {
 class LandingPage extends Component {
   render() {
     return (
-      <div className="landing page">
+      <div className="landing page" style={{ position: 'relative', zIndex: 1 }}>
         <Opening />
-        <Speaker />
         <Intro />
+        <Reach />
+        <ExploreTalksSection />
+        <Speaker />
+        <Newsletter />
       </div>
     );
   }

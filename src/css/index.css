@@ -11,9 +11,62 @@
   to {opacity: 1;}
 }
 
-body *:not(i) {
-  margin: 0;
-  padding: 0;
+/* New Modern Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Utility classes for animations */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out both;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease-out both;
+}
+
+/* Staggered delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* fixed the body dimensions a bit*/
+body {
   font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
 }
 .fl-right {
@@ -59,4 +112,92 @@ a.link-unset:hover {
 }
 .markdown img {
   margin: 1.25rem 0;
+}
+/* Defensive rule: ensure common interactive elements accept pointer events */
+a, button, [role="button"], .btn, .nav-link, .navbar a, .page-footer a {
+  pointer-events: auto !important;
+}
+/* Ensure decorative overlays never intercept clicks */
+.bg-image, .bg-image-overlay, .card-img-overlay {
+  pointer-events: none !important;
+}
+
+/* Global reset for pointer events and selection */
+html, body, #root {
+  pointer-events: auto !important;
+  user-select: auto !important;
+}
+
+/* Ensure no full-screen overlays block us */
+.loading-placeholder, .component-loader {
+  pointer-events: none !important;
+  user-select: none !important;
+  z-index: -1 !important;
+  display: none !important;
+}
+
+/* KILL SWITCH: Remove rogue iframes blocking the screen */
+iframe[style*="z-index: 2147483647"],
+iframe[style*="position: fixed"][style*="width: 100%"][style*="height: 100%"] {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+  z-index: -9999 !important;
+}
+
+/* Global Safety: Prevent invisible overlays from blocking interactions */
+div[class*="overlay"] {
+  pointer-events: none !important;
+}
+
+/* Fix for hidden attribute not working in some environments */
+[hidden] {
+  display: none !important;
+}
+
+/* Ensure Navbar wrapper doesn't block clicks */
+.navbar-wrapper-safety {
+  pointer-events: none;
+}
+.navbar-wrapper-safety > * {
+  pointer-events: auto;
+}
+
+/* Safety net for initial loader */
+.loading-placeholder {
+  pointer-events: none !important;
+}
+
+/* Async Component Loader Styles */
+.component-loader {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  /* Prevent loader from blocking clicks if it gets stuck */
+  pointer-events: none !important;
+}
+
+.component-loader .center-content {
+  width: 300px;
+  position: absolute;
+  left: calc(50% - 150px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.component-loader .loader {
+  border: 8px solid transparent;
+  border-top: 8px solid #E62B1E;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin: 30px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

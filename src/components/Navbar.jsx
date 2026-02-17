@@ -49,8 +49,8 @@ class Navbar extends Component {
       ? `${featured.id}/${slugify(featured.name || '', slugConfig)}`
       : ''
     return (
-      <div>
-        <nav className="navbar fixed-top text-uppercase px-0 py-2">
+      <div className="navbar-wrapper-safety" style={{ pointerEvents: 'none' }}>
+        <nav className="navbar fixed-top text-uppercase px-0 py-2" style={{ pointerEvents: 'auto' }}>
           <div className="container">
             <div className="col-10 col-md-3 pl-0">
               <Link to="/">
@@ -110,7 +110,8 @@ class Navbar extends Component {
           </div>
           <div
             className="xs-nav w-100 mt-2 border-top bg-white animation-fade border"
-            hidden={!this.state.showNav}>
+            hidden={!this.state.showNav}
+            style={{ pointerEvents: this.state.showNav ? 'auto' : 'none' }}>
             <div className="container">
               <div className="row">
                 <ul className="nav-flex-column list-unstyled">

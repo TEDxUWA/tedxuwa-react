@@ -19,7 +19,7 @@ class AboutPage extends Component {
   showAll = () => this.setState({ max: this.state.team.length });
   render() {
     return (
-      <div className="about page">
+      <div className="about page animate-fade-in-up">
         <PageHeader
           title="About Us"
           lead="We seek to find and share ideas from around the world and closer to home with the UWA community. We are students from the University of Western Australia, we are TEDxUWA."
@@ -27,60 +27,91 @@ class AboutPage extends Component {
           image={banner}
         />
         <div className="container py-4 px-0">
-          <div className="tedx-group col-md-7">
-            <h3 className="font-weight-bold mb-2">What is TEDx</h3>
-            <p className="text-justify">
+          <div className="tedx-group col-md-8 mx-auto text-center">
+            <h3 className="font-weight-bold mb-2">What is TEDx?</h3>
+            <p className="text-justify text-center lead">
               In the spirit of ideas worth spreading, TED has created a program
               called TEDx. TEDx is a program of local, self-organized events
               that bring people together to share a TED-like experience. Our
               event is called TEDxUWA, where x = independently organized TED
-              event. At our TEDxUWA event, TEDTalks video and live speakers will
-              combine to spark deep discussion and connection in a small group.
-              The TED Conference provides general guidance for the TEDx program,
-              but individual TEDx events, including ours, are self-organized.
+              event.
             </p>
+            <ul className="list-group list-group-flush mb-3 text-left d-inline-block" style={{ fontSize: '1.1rem' }}>
+              <li className="list-group-item border-0 pl-0">
+                <i className="fas fa-check text-primary mr-2"></i>
+                <strong>Independently Organized:</strong> Self-organized events that adhere to TED's guidelines.
+              </li>
+              <li className="list-group-item border-0 pl-0">
+                <i className="fas fa-check text-primary mr-2"></i>
+                <strong>Deep Discussion:</strong> TEDTalks video and live speakers combine to spark connection.
+              </li>
+              <li className="list-group-item border-0 pl-0">
+                <i className="fas fa-check text-primary mr-2"></i>
+                <strong>Community Focused:</strong> Tailored specifically for the UWA community.
+              </li>
+            </ul>
           </div>
-          <div className="tedx-group col-md-7 mt-4">
+          <div className="tedx-group col-md-8 mx-auto mt-4 text-center">
             <h3 className="font-weight-bold mb-2">About TED</h3>
             <div>
-              <p className="text-justify">
+              <p className="text-justify text-center lead">
                 TED is a nonprofit organization devoted to Ideas Worth
                 Spreading. Started as a four-day conference in California 30
                 years ago, TED has grown to support its mission with multiple
-                initiatives. The two annual TED Conferences invite the world's
-                leading thinkers and doers to speak for 18 minutes or less. Many
-                of these talks are then made available, free, at TED.com. TED
-                speakers have included Bill Gates, Jane Goodall, Elizabeth
-                Gilbert, Sir Richard Branson, Nandan Nilekani, Philippe Starck,
-                Ngozi Okonjo-Iweala, Sal Khan and Daniel Kahneman.
+                initiatives.
               </p>
+              <ul className="list-group list-group-flush mb-3 text-left d-inline-block" style={{ fontSize: '1.1rem' }}>
+                <li className="list-group-item border-0 pl-0">
+                  <i className="fas fa-microphone text-primary mr-2"></i>
+                  <strong>Annual Conferences:</strong> Leading thinkers and doers speak for 18 minutes or less.
+                </li>
+                <li className="list-group-item border-0 pl-0">
+                  <i className="fas fa-globe text-primary mr-2"></i>
+                  <strong>Global Reach:</strong> Talks are made available for free at TED.com.
+                </li>
+                <li className="list-group-item border-0 pl-0">
+                  <i className="fas fa-star text-primary mr-2"></i>
+                  <strong>Notable Speakers:</strong> Bill Gates, Jane Goodall, Sir Richard Branson, and many more.
+                </li>
+              </ul>
               <br />
-              <p className="text-justify">
-                The annual TED Conference takes place each spring in Vancouver,
-                British Columbia. TED's media initiatives include TED.com, where
-                new TED Talks are posted daily; the Open Translation Project,
-                which provides subtitles and interactive transcripts as well as
-                translations from volunteers worldwide; the educational
-                initiative TED-Ed. TED has established the annual TED Prize,
-                where exceptional individuals with a wish to change the world
-                get help translating their wishes into action; TEDx, which
-                supports individuals or groups in hosting local, self- organized
-                TED-style events around the world, and the TED Fellows program,
-                helping world-changing innovators from around the globe to
-                amplify the impact of their remarkable projects and activities.
-              </p>
+              <h5 className="font-weight-bold">Key Initiatives</h5>
+              <ul className="list-group list-group-flush text-left d-inline-block" style={{ fontSize: '1.1rem' }}>
+                <li className="list-group-item border-0 pl-0">
+                  <i className="fas fa-video text-primary mr-2"></i>
+                  <strong>TED.com:</strong> New TED Talks posted daily.
+                </li>
+                <li className="list-group-item border-0 pl-0">
+                  <i className="fas fa-language text-primary mr-2"></i>
+                  <strong>Open Translation Project:</strong> Subtitles and interactive transcripts worldwide.
+                </li>
+                <li className="list-group-item border-0 pl-0">
+                  <i className="fas fa-graduation-cap text-primary mr-2"></i>
+                  <strong>TED-Ed:</strong> Educational videos and lessons.
+                </li>
+                <li className="list-group-item border-0 pl-0">
+                  <i className="fas fa-award text-primary mr-2"></i>
+                  <strong>TED Prize:</strong> Helping exceptional individuals translate wishes into action.
+                </li>
+                 <li className="list-group-item border-0 pl-0">
+                  <i className="fas fa-users text-primary mr-2"></i>
+                  <strong>TED Fellows:</strong> Amplifying the impact of world-changing innovators.
+                </li>
+              </ul>
               <br />
-              <span className="text-left">
-                Follow TED on Twitter at&nbsp;
-                <a href="http://twitter.com/TEDTalks">
-                  http://twitter.com/TEDTalks
-                </a>
-                , or on Facebook at&nbsp;
-                <a href="http://www.facebook.com/TED">
-                  http://www.facebook.com/TED
-                </a>
-                .
-              </span>
+              <div className="alert alert-light border-left-primary d-inline-block mt-3 text-left" role="alert" style={{ borderLeft: '4px solid #E62B1E', maxWidth: '600px' }}>
+                <span className="lead">
+                  Follow TED on Twitter at&nbsp;
+                  <a href="http://twitter.com/TEDTalks" className="font-weight-bold text-dark">
+                    @TEDTalks
+                  </a>
+                  , or on Facebook at&nbsp;
+                  <a href="http://www.facebook.com/TED" className="font-weight-bold text-dark">
+                    Facebook.com/TED
+                  </a>
+                  .
+                </span>
+              </div>
             </div>
           </div>
         </div>
